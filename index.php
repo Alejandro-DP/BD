@@ -9,44 +9,42 @@ if (isset($_SESSION['login'])){
 <!DOCTYPE html>
 <html>
 <head lang="es">
-	<link rel="icon" href="Recursos/logo.ico">
+<!--	<link rel="icon" href="Recursos/logo.ico"> !-->
 	<title>
 		PhpMyPirata
 	</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/site.css">
 	<meta charset="utf-8">
 	<meta name="Viewport" content="width=device-width",initial-scale=1.0>
 </head>
-<body>
+<body class="box">
 <header>
 	
 </header>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<center>
-<table class="table-dark">
-	<tr>
-		<td>
-		    <form action="BD/validacion.php" method="post">
-		    	<br>
-		    	<center><img src="Recursos/logo.png" height="50" width="100"></center>
-		    	<br>
-		    	<input class="form-control" type="text" name="user" placeholder="Usuario">
-		    	<br>
-		    	<input class="form-control" type="password" name="pass" placeholder="Contraseña">
-		    	<br>
-		    	<center><input class="btn btn-success" type="submit" name="enviar" value="Accesar"></center>
-		    	<br>
-		    </form>
-		</td>
-	</tr>
-</table>
+<div class="col-md-4 col-md-offset-1" id="pagebg">
+	<img src="Recursos/page_background.png"id="img">
+</div>
 
+	<form action="BD/validacion.php" method="post" class="col-md-4 col-md-offset-1" id="log">
+	    <div class="col-md-4 col-md-offset-1" id="">
+			<img src="Recursos/thelogo.png"id="logo">
+		</div>
+	<div class="input-group"id="form">
+           
+		<input class="form-control" type="text" name="user" placeholder="Usuario">
+
+	   </div> 
+	   <div class="input-group"id="form2">
+        
+	   <input class="form-control" type="password" name="pass" placeholder="Contraseña">
+
+	   </div> 
+	   <div class="input-group">
+	   		<input class="btn btn-lg btn-primary btn-block" id="btn" type="submit" name="enviar" value="Accesar">
+        </div>
+	</form>
+	
 
 </center>
 <footer>

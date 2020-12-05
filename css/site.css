@@ -1,0 +1,46 @@
+﻿body {
+    background: #0ED1AA;
+    display: flex;
+}
+#log {
+    
+    background: #ffffff;
+    opacity: 93%;
+    width: 550px;
+    height: 570px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-right: 50px;
+    box-shadow: 7px 8px 16px 5px #00000083;
+    padding: 30px;
+}
+#form{
+    margin-top:50px;
+}
+#form2{
+    margin-top:40px;
+}
+#usuario{
+    width: 490px;
+    
+}
+#contra{
+    width: 490px;
+}
+#btn{
+    margin: 30px;
+}
+#pagebg{
+    margin-right: auto;
+    margin-top: 120px;
+    
+}
+#img{
+    width: 600px;
+    height: 300px;
+    
+}
+#logo{
+    margin-top: 30px;
+    margin-left: 80px;
+}
