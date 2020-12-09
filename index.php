@@ -25,7 +25,7 @@ if (isset($_SESSION['login'])){
 <div class="col-md-4 col-md-offset-1" id="pagebg">
 	<img src="Recursos/page_background.png"id="img">
 </div>
-
+   
 	<form action="BD/validacion.php" method="post" class="col-md-4 col-md-offset-1" id="log">
 	    <div class="col-md-4 col-md-offset-1" id="">
 			<img src="Recursos/thelogo.png"id="logo">
@@ -46,7 +46,7 @@ if (isset($_SESSION['login'])){
 	</form>
 	
 
-</center>
+
 <footer>
 	
 </footer>
