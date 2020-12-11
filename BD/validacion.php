@@ -9,8 +9,10 @@ $fias=mysqli_fetch_array($query);
 
 if ($fias['id_cargoo']==1){
 session_start();
-$_SESSION['login']="Administrador";
-echo "admin";
+$_SESSION['login']=$nombr;
+echo "<script>
+location.href='../VistasAdmin/DashboardAdmin.php';
+</script>";
 }
 else
 if ($fias['id_cargoo']==2) {
@@ -20,7 +22,8 @@ if ($fias['id_cargoo']==2) {
 
 else{
 	echo "<script>
-          alert('No tienes acceso al sistema');
+		  alert('No tienes acceso al sistema');
+		  location.href='../index.php';
 	</script>";
 }
 ?>
