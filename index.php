@@ -16,7 +16,7 @@ if (isset($_SESSION['login'])){
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/site.css">
 	<meta charset="utf-8">
-	<meta name="Viewport" content="width=device-width",initial-scale=1.0>
+	<meta name="Viewport" content="width=device-width",initial-scale=0.86,maximum-scale=5.0,minimum-scale=0.86>
 </head>
 <body class="box">
 <header>
