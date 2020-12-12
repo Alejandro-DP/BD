@@ -1,6 +1,4 @@
-body{
-  
-}
+
 .user-var{
   display: flex;
   background: #0ED1AA;
@@ -11,11 +9,14 @@ body{
   
   margin-top: 10px;
   margin-left: 1100px ;
-  
   width: 200px;
   height: 30px;
   border-left: 1px solid #ffffff;
 }
 p{
   color: #ffffff;
+}
+.logo-user{
+  width: 20px;
+  height: 20px;
 }

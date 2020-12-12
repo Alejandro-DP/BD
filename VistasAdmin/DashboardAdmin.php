@@ -16,7 +16,7 @@
 	
 <div class="user-var">
   <div class="user">
-    
+  
     <p class="text-right" id="name">
     <?php 
      session_start();
@@ -25,8 +25,8 @@
   ?>
     </p>
   </div>
-  
 </div>
+
 
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
