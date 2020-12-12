@@ -1,21 +1,48 @@
 body{
-  
+ background: #cecaca;
 }
 .user-var{
   display: flex;
   background: #0ED1AA;
   width: 1366px;
   height: 50px;
+  opacity: 70%;
+  box-shadow: 10px black;
+  
 }
 .user{
-  
+  display: flex;
   margin-top: 10px;
-  margin-left: 1100px ;
-  
-  width: 200px;
+  margin-left: 1000px ;
+  width: 270px;
   height: 30px;
   border-left: 1px solid #ffffff;
 }
-p{
+p{ 
+  margin-left: 30px;
   color: #ffffff;
+}
+.user-logo{
+  border-radius: 50%;
+  width: 40px;
+  height: 35px;
+  
+}
+.img{
+  margin-left: 20px;
+  
+}
+.logodb{
+  display: flex;
+  width: 30px;
+  height: 40px;
+  margin-left: 30px;
+  margin-top: 5px;
+  opacity: 50%;
+}
+.menu{
+  
+  background: white;
+  width: 200px;
+  height: 605px;
 }

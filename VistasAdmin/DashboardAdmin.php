@@ -15,8 +15,14 @@
 <body>
 	
 <div class="user-var">
+  <div class="logodb">
+    <img src="../Recursos/thelogo.png">
+  </div>
   <div class="user">
-    
+    <div class="img">
+     <img src="../Recursos/perfildeusuario.jpg" class="user-logo" >
+    </div>
+   
     <p class="text-right" id="name">
     <?php 
      session_start();
@@ -25,8 +31,11 @@
   ?>
     </p>
   </div>
-  
 </div>
+<div  class="menu">
+
+</div>
+
 
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
