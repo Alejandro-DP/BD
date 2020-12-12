@@ -15,8 +15,14 @@
 <body>
 	
 <div class="user-var">
+  <div class="logodb">
+    <img src="../Recursos/thelogo.png">
+  </div>
   <div class="user">
-  
+    <div class="img">
+     <img src="../Recursos/perfildeusuario.jpg" class="user-logo" >
+    </div>
+   
     <p class="text-right" id="name">
     <?php 
      session_start();
