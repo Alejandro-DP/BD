@@ -33,8 +33,16 @@
   </div>
 </div>
 <div  class="menu">
-  <div class="button-flo">
+  <div class="button-flo" onclick="togle()">
     <p class="opc"> +</p>
+  </div>
+  <div class="opciones">
+    <!--<ul>
+      <li>Importar</li>
+      <li>Exportar</li>
+      <li>Cuentas de Usuario</li>
+      <li>Bases de Datos</li>
+    </ul>!-->
   </div>
 </div>
 
