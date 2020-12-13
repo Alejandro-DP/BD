@@ -1,13 +1,14 @@
 body{
- background: #cecaca;
+ 
 }
 .user-var{
   display: flex;
   background: #0ED1AA;
   width: 1366px;
   height: 50px;
-  opacity: 70%;
-  box-shadow: 10px black;
+  opacity: 50%;
+  -webkit-box-shadow: 0px 5px 15px 0px #000000; 
+  box-shadow: 0px 5px 15px 0px #000000;
   
 }
 .user{
@@ -17,6 +18,7 @@ body{
   width: 270px;
   height: 30px;
   border-left: 1px solid #ffffff;
+
 }
 p{ 
   margin-left: 30px;
