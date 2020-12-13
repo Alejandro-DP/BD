@@ -33,11 +33,21 @@
   </div>
 </div>
 <div  class="menu">
-
+  <div class="button-flo" onclick="togle()">
+    <p class="opc"> +</p>
+  </div>
+  <div class="col-md-4 col-md-offset-1" id="opciones">
+    
+      <li>Importar</li>
+      <li>Exportar</li>
+      <li>Cuentas de Usuario</li>
+      <li>Bases de Datos</li>
+    
+  </div>
 </div>
 
-
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/app.js">  
+  <script src="js/jquery/jquery.min.js"></script>
+  <script src="js/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
