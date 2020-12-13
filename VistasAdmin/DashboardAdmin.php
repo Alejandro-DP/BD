@@ -36,13 +36,13 @@
   <div class="button-flo" onclick="togle()">
     <p class="opc"> +</p>
   </div>
-  <div class="opciones">
-    <!--<ul>
+  <div class="col-md-4 col-md-offset-1" id="opciones">
+    
       <li>Importar</li>
       <li>Exportar</li>
       <li>Cuentas de Usuario</li>
       <li>Bases de Datos</li>
-    </ul>!-->
+    
   </div>
 </div>
 

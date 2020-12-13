@@ -67,10 +67,22 @@ body{
   text-align:center;
   color: #ffffff;
 }
-.opciones{
-  width: 100px;
-  height: 100px;
-  margin-top: 200px;
-  margin-right: 10px;
-  background: black;
+#opciones{
+  margin-left: 1050px;
+  margin-top: 375px;
+  position: absolute;
+  height: 150px;
+  width: 230px;
+  background: #ffffff;
 }
+li{ 
+
+  margin-bottom: 10px;
+  margin-top: 10px;
+  list-style: none;
+}
+li:hover{
+  background-color: #cecaca;
+  opacity: 50%;
+}
+
