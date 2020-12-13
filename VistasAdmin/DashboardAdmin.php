@@ -33,11 +33,11 @@
   </div>
 </div>
 <div  class="menu">
+  <div class="button-flo">
+    <p class="opc"> +</p>
+  </div>
+</div>
 
-</div>
-<div class="button-float">
-  +
-</div>
 
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
