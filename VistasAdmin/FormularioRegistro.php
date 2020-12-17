@@ -15,6 +15,9 @@
     <option value="1">Adminstrador</option>
     <option value="2">Programador</option>
   </select>
+  <input type="submit" name="enviar" value="Registrar">
 </form>
+
+
 </body>
 </html>
