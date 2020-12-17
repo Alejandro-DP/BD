@@ -86,4 +86,12 @@ li:hover{
   background-color: #cecaca;
   opacity: 50%;
 }
+#user-content{
+  background: white;
+  margin-right: 100px;
+  position: absolute;
+  border: 1px black;
+  width: 100px;
+  height: 100px;
+}
 

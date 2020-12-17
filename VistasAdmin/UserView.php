@@ -3,7 +3,7 @@
 <head lang="es">
 	<link  rel="icon" href="../Recursos/favicon.ico">
 	<title>
-		Dashboard
+		Usuarios
 	</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5,minimum-scale=0.86">
@@ -32,6 +32,9 @@
     </p>
   </div>
 </div>
+<div class="col-md-4 col-md-offset-1" id="user-content">
+    user
+</div>
 <div  class="menu">
   <div class="button-flo" onclick="togle()">
     <p class="opc"> +</p>
@@ -39,7 +42,7 @@
   <div class="col-md-4 col-md-offset-1" id="opciones">
     
       <li>Importar</li>
-      <li >Exportar</li>
+      <li>Exportar</li>
       <li>Cuentas de Usuario</li>
       <li>Bases de Datos</li>
     
