@@ -20,7 +20,7 @@ else {
     echo "<script>
     alert('registro realizado con exito');
     </script>"
-}
+};
 
 ?>
 
