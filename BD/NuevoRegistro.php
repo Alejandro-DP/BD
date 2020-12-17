@@ -8,7 +8,7 @@ $apellidop=$_POST['apellidop'];
 $contraseña=$_POST['contra'];
 $cargo =$_POST['aqui se haria del select'];
 
-$Insertar="INSERT INTO usuarios VALUES ('$nombre','$apellidom','$apellidop','$contraseña','$cargo')";
+$Insertar="INSERT INTO usuarios VALUES ('','$nombre','$apellidom','$apellidop','$contraseña','$cargo')";
 $consulta=mysqli_query($conexion,$Insertar);
 
 if(!$consulta){
