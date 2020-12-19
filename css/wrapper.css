@@ -82,7 +82,7 @@ li{
   margin-top: 10px;
   list-style: none;
 }
-li:hover{
+li :hover{
   background-color: #cecaca;
   opacity: 50%;
 }
@@ -94,4 +94,3 @@ li:hover{
   width: 100px;
   height: 100px;
 }
-
