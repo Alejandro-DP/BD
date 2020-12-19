@@ -60,7 +60,8 @@ body{
 
 }
 .opc{
-  
+  opacity: 80%;
+  border-radius: 50%;
   width: 50px;
   height: 50px;
   font-size: xx-large;
@@ -77,14 +78,16 @@ body{
   display: none;
 }
 li{ 
- 
+  
   margin-bottom: 10px;
   margin-top: 10px;
   list-style: none;
 }
-li :hover{
+li:hover{
+ 
   background-color: #cecaca;
   opacity: 50%;
+  color: black;
 }
 #user-content{
   background: white;
@@ -94,3 +97,14 @@ li :hover{
   width: 100px;
   height: 100px;
 }
+li>a{
+ text-decoration: none;
+ color: black;
+}
+a:hover{
+  text-decoration:none;
+  background-color: #cecaca;
+  opacity: 50%;
+  color: black ;
+
+

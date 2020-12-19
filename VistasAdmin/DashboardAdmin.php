@@ -34,12 +34,12 @@
 </div>
 <div  class="menu">
   <div class="button-flo" onclick="togle()">
-    <p class="opc"> +</p>
+    <img class="opc"src="../Recursos/more.png" >
   </div>
   <div class="col-md-4 col-md-offset-1" id="opciones">
     
       <li>Importar</li>
-      <li >Exportar</li>
+      <li ><a href="#">Exportar</a></li>
       <li><a href="userView.php">Cuentas de Usuario</a></li>
       <li>Bases de Datos</li>
     
