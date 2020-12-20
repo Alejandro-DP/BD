@@ -89,14 +89,7 @@ li:hover{
   opacity: 50%;
   color: black;
 }
-#user-content{
-  background: white;
-  margin-right: 100px;
-  position: absolute;
-  border: 1px black;
-  width: 100px;
-  height: 100px;
-}
+
 li>a{
  text-decoration: none;
  color: black;
@@ -106,5 +99,21 @@ a:hover{
   background-color: #cecaca;
   opacity: 50%;
   color: black ;
+}
+#user-content{
+  border-radius: 6px;
+  margin-top: 50px;
+  background: white;
+  margin-left: 300px;
+  position: absolute;
+  width: 250px;
+  height: 300px;
+}
+.cont-img-user{
+  border-radius: 50%;
+  width: 100px ;
+  height: 100px;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 

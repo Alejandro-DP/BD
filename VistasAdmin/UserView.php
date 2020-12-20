@@ -33,7 +33,7 @@
   </div>
 </div>
 <div class="col-md-4 col-md-offset-1" id="user-content">
-    user
+    <img src="../Recursos/user-img.png" class="cont-img-user">
 </div>
 <div  class="menu">
   <div class="button-flo" onclick="togle()">
@@ -41,10 +41,10 @@
   </div>
   <div class="col-md-4 col-md-offset-1" id="opciones">
     
-      <li>Importar</li>
-      <li>Exportar</li>
-      <li><a>Cuentas de Usuario</a></li>
-      <li>Bases de Datos</li>
+      <li><a>Importar</a></li>
+      <li ><a href="#">Exportar</a></li>
+      <li><a href="userView.php">Cuentas de Usuario</a></li>
+      <li><a>Bases de Datos</a></li>
     
   </div>
 </div>
