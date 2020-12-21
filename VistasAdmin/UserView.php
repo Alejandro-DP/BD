@@ -43,7 +43,7 @@
     
       <li><a>Importar</a></li>
       <li ><a href="#">Exportar</a></li>
-      <li><a href="userView.php">Cuentas de Usuario</a></li>
+      <li><a href="UserView.php">Cuentas de Usuario</a></li>
       <li><a>Bases de Datos</a></li>
     
   </div>
