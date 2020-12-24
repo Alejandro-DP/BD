@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>
-TablaClientes
-</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../DataTables/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <title></title>
 </head>
 <body>
-
 <table>
 <tr>
 <td>
@@ -55,16 +56,9 @@ while ($consulta=mysqli_fetch_array($consulta2)){
 <?php
 }
 ?>
-
-
-
 </table>
-
-
-
-
-
-
-
+<script src="js/jquery/jquery.min.js"></script>
+<script src="js/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../DataTables/datatables.min.js"></script>
 </body>
 </html>
