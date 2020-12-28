@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../DataTables/css/dataTables.bootstrap4.min.css">
+    
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <title></title>
 </head>
 <body>
-<table>
+<table id="table" class="table table-striped table-hover table-bordered" style="width:100%">
 <tr>
 <td>
 ID CLIENTE
@@ -57,8 +57,7 @@ while ($consulta=mysqli_fetch_array($consulta2)){
 }
 ?>
 </table>
-<script src="js/jquery/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="js/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../DataTables/datatables.min.js"></script>
 </body>
 </html>
