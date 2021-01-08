@@ -17,6 +17,7 @@
 <div class="user-var">
   <div class="logodb">
     <img src="../Recursos/thelogo.png">
+    
   </div>
   <div class="user">
     <div class="img">
@@ -34,6 +35,27 @@
 </div>
 <div  class="menu">
   <div>
+  <table>
+   <tr>
+  <th> Bases De Datos </th>
+  </tr>
+  <?php
+  require '../BD/conexion.php';
+  $sentenciasql="SHOW DATABASES";
+  $consulta=mysqli_query($conexion,$sentenciasql);
+  while($otra=mysqli_fetch_row($consulta)){
+    echo "
+    <tr>
+    <td>
+    {$otra[0]}\n
+    </td>
+    </tr>
+    ";
+  }
+
+?>
+  </table>
+
   </div>
   <div class="button-flo" onclick="togle()">
     <img class="opc"src="../Recursos/more.png" >
