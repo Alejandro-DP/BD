@@ -65,7 +65,7 @@
   </div>
   <div class="col-md-4 col-md-offset-1" id="opciones">
     
-      <li><a>Importar</a></li>
+      <li><a href="#">Importar</a></li>
       <li ><a href="#">Exportar</a></li>
       <li><a href="UserView.php">Cuentas de Usuario</a></li>
       <li><a>Bases de Datos</a></li>
