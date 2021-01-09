@@ -35,26 +35,29 @@
 </div>
 <div  class="menu">
   <div>
-  <table>
-   <tr>
-  <th> Bases De Datos </th>
-  </tr>
+  <ul>Bases de datos
   <?php
   require '../BD/conexion.php';
   $sentenciasql="SHOW DATABASES";
   $consulta=mysqli_query($conexion,$sentenciasql);
-  while($otra=mysqli_fetch_row($consulta)){
+
+  while($otra=mysqli_fetch_row($consulta)){  
+      
     echo "
-    <tr>
-    <td>
-    {$otra[0]}\n
-    </td>
-    </tr>
+    <li>
+    {$otra[0]}
+    
+    </li>
+    
     ";
+    
+    
   }
+  
+  
 
 ?>
-  </table>
+  </ul>
 
   </div>
   <div class="button-flo" onclick="togle()">
