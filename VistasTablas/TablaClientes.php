@@ -34,7 +34,7 @@
 <form method="POST" class="show-t">
 <table id="tabla" class="table-responssive table-striped table-bordered" >
 <thead class="thead-light"> 
-    
+    <th>
        <?php
 require '../BD/conexion.php';
 $cons="SHOW COLUMNS FROM cliente FROM Air";
@@ -48,7 +48,7 @@ echo "
 }
 
 ?>
-    
+    </th>
 </thead>
 <?php
 
