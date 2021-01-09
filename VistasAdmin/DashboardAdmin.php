@@ -34,34 +34,6 @@
   </div>
 </div>
 <div  class="menu">
-<<<<<<< HEAD
-  <div>
-  <ul>Bases de datos
-  <?php
-  require '../BD/conexion.php';
-  $sentenciasql="SHOW DATABASES";
-  $consulta=mysqli_query($conexion,$sentenciasql);
-
-  while($otra=mysqli_fetch_row($consulta)){  
-      
-    echo "
-    <li>
-    {$otra[0]}
-    
-    </li>
-    
-    ";
-    
-    
-  }
-  
-  
-
-?>
-  </ul>
-
-  </div>
-=======
   <h5 class = "icon-dat">
     bases de datos
 </h5>
@@ -74,15 +46,15 @@
     while($otra=mysqli_fetch_row($consulta)){
       echo "
       <tr >
-      {$otra[0]}\n
+      {$otra[0]}
       </tr>
+      <br>
       ";
     }
 
   ?>
   </tr>
 </div>
->>>>>>> 44565e0e95660a397cfab43ec64a5d007da78f69
   <div class="button-flo" onclick="togle()">
     <img class="opc"src="../Recursos/more.png" >
   </div>
