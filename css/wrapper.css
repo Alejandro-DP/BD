@@ -129,3 +129,10 @@ a:hover{
   margin-top: 90px;
   
 }
+.show-t{
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 80px;
+  width: 400px;
+  height:100% ;
+}
