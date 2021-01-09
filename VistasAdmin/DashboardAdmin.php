@@ -45,10 +45,10 @@
     $consulta=mysqli_query($conexion,$sentenciasql);
     while($otra=mysqli_fetch_row($consulta)){
       echo "
-      <tr>
-      <br>  
-      {$otra[0]}\n
+      <tr >
+      {$otra[0]}
       </tr>
+      <br>
       ";
     }
 

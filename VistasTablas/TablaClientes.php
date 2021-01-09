@@ -13,14 +13,14 @@
 <form method="POST">
 <table id="tabla" class="table-responssive table-striped table-bordered" style="width:100%">
 <thead class="thead-light"> 
-    <tr>
+    
         <th>ID CLIENTE</th>
         <th>Nombre</th>
         <th>EDAD</th>
         <th>TELEFONO</th>
         <th>CORREO ELECTRONICO</th>
         <th>SELECCIONAR</th>
-    </tr>
+    
 </thead>
 <?php
 
