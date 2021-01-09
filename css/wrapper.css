@@ -130,9 +130,13 @@ a:hover{
   
 }
 .show-t{
+  padding: 10px;
   position: absolute;
-  margin-left: 100px;
-  margin-top: 80px;
-  width: 400px;
-  height:100% ;
+  margin-left: 400px;
+  margin-top: 70px;
+  width: 60%px;
+  height: 500px;
+  background: #ffffff;
+  -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
+  box-shadow: 1px 0px 15px 5px #00000075;
 }

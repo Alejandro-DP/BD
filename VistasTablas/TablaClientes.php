@@ -30,7 +30,7 @@
     </p>
   </div>
 </div>
-<div class="card-body">
+
 <form method="POST" class="show-t">
 <table id="tabla" class="table-responssive table-striped table-bordered" >
 <thead class="thead-light"> 
@@ -145,6 +145,7 @@ if(isset($_POST['borrar'])){
 
 
 <script src="../js/jquery.js"></script>
+<script src="../js/app.js"> 
 <script src="../js/bootstrap.min.js"></script>
 <script src="../DT/DataTables-1.10.23/js/jquery.dataTables.min.js"></script>
 <script src="../DT/DataTables-1.10.23/js/dataTables.bootstrap4.min.js"></script>
