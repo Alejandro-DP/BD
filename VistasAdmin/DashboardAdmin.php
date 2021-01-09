@@ -45,7 +45,8 @@
     $consulta=mysqli_query($conexion,$sentenciasql);
     while($otra=mysqli_fetch_row($consulta)){
       echo "
-      <tr >
+      <tr>
+      <br>  
       {$otra[0]}\n
       </tr>
       ";
@@ -53,6 +54,11 @@
 
   ?>
   </tr>
+  <div class="tables">
+    <tr>
+
+    </tr>
+  </div>
 </div>
   <div class="button-flo" onclick="togle()">
     <img class="opc"src="../Recursos/more.png" >
