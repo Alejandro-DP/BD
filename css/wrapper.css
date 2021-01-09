@@ -116,4 +116,19 @@ a:hover{
   margin-left: 50px;
   margin-top: 20px;
 }
-
+.icon-dat{
+  position: absolute;
+  margin-left: 20px;
+  width: 140px;
+  margin-top: 50px;
+}
+.data-bases{
+  position: absolute;
+  margin-left: 20px;
+  width: 140px;
+  margin-top: 80px;
+  
+}
+.data{
+  margin-bottom: 20px;
+}
