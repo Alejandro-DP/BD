@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5,minimum-scale=0.86">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+
 	  <link href="css/simple-sidebar.css" rel="stylesheet">
 	  <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
 </head>
@@ -34,6 +34,7 @@
   </div>
 </div>
 <div  class="menu">
+<<<<<<< HEAD
   <div>
   <ul>Bases de datos
   <?php
@@ -60,6 +61,28 @@
   </ul>
 
   </div>
+=======
+  <h5 class = "icon-dat">
+    bases de datos
+</h5>
+<div class="data-bases">
+  <tr class="data">
+    <?php
+    require '../BD/conexion.php';
+    $sentenciasql="SHOW DATABASES";
+    $consulta=mysqli_query($conexion,$sentenciasql);
+    while($otra=mysqli_fetch_row($consulta)){
+      echo "
+      <tr >
+      {$otra[0]}\n
+      </tr>
+      ";
+    }
+
+  ?>
+  </tr>
+</div>
+>>>>>>> 44565e0e95660a397cfab43ec64a5d007da78f69
   <div class="button-flo" onclick="togle()">
     <img class="opc"src="../Recursos/more.png" >
   </div>
