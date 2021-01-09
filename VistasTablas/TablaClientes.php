@@ -35,12 +35,19 @@
 <table id="tabla" class="table-responssive table-striped table-bordered" >
 <thead class="thead-light"> 
     
-        <th>ID CLIENTE</th>
-        <th>Nombre</th>
-        <th>EDAD</th>
-        <th>TELEFONO</th>
-        <th>CORREO ELECTRONICO</th>
-        <th>SELECCIONAR</th>
+       <?php
+require '../BD/conexion.php';
+$cons="SHOW COLUMNS FROM cliente FROM Air";
+$query=mysqli_query($conexion,$cons);
+while($fields=mysqli_fetch_row($query)){
+
+echo "
+
+<th> '$fields[0]' </th>
+"  ;
+}
+
+?>
     
 </thead>
 <?php
@@ -49,9 +56,15 @@ require '../BD/conexion.php';
 $query ="SELECT *FROM cliente";
 $consulta2=mysqli_query($conexion,$query);
 while ($consulta=mysqli_fetch_array($consulta2)){
+
+
     
 
 echo '<tr>
+
+
+
+
 <td>' .$consulta['Id_cliente']. '</td>
 <td>'  .$consulta['Nom_clien'].'</td>
 <td>'.$consulta['Edad'].'</td>
@@ -59,23 +72,6 @@ echo '<tr>
 <td>'.$consulta['email'].'</td>
 <td><input type="checkbox" name="eliminar[]" value"  '.$consulta['Id_cliente'].'"/> </td>
 </tr>';
-/*
-<?php echo $consulta["Id_cliente"] ?>
-</td>
-<td>
-<?php echo $consulta["Nom_clien"] ?>
-</td>
-<td>
-<?php echo $consulta["Edad"] ?>
-</td>
-<td>
-<?php echo $consulta ["tel_cliente"]?>
-</td>
-<td>
-<?php echo $consulta["email"]?>
-</td>
-</tr>
-<?php*/
 }
 ?>
 </table>
