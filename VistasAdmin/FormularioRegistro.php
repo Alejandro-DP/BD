@@ -56,35 +56,18 @@
     </p>
   </div>
 </div>
-<div class="col-md-4 col-md-offset-1" id="user-content">
-<table>
-<tr>
-<th>
-<img src="../Recursos/logo.png" heigth="100" width="100" >
-</th>
-<th>
-<form action="../BD/NuevoRegistro.php" method="POST">
-  <input type="text" name="nombre" placeholder="nombre">
-  <input type="text" name="apellidom" placeholder="Apellido Materno">
-  <input type="text" name="apellidop" placeholder="Apellido Paterno">
-  <input type="password" name="contra" placeholder="Contraseña">
-  <select name="seleccion">
-    <option value="1">Adminstrador</option>
-    <option value="2">Programador</option>
-  </select>
-  <input type="submit" name="enviar" value="Registrar">
-  </th>
-</tr>  
-</form>
-</table>   
+<div class="card-body" id="user-content">
+
 </div>
 <div  class="menu">
-  <div class="button-flo" onclick="togle()">
-    <p class="opc"> +</p>
+  
+</div>
+<div class="button-flo" onclick="togle()">
+    <img class="opc"src="../Recursos/more.png" >
   </div>
   <div class="col-md-4 col-md-offset-1" id="opciones">
     
-      <li><a>Importar</a></li>
+      <li><a href="#">Importar</a></li>
       <li ><a href="#">Exportar</a></li>
       <li><a href="UserView.php">Cuentas de Usuario</a></li>
       <li><a>Bases de Datos</a></li>
