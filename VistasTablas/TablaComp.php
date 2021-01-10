@@ -1,59 +1,145 @@
-<DOCTYPE html>
-<html lang=es>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>
-TablaCompañias
-</title>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
+    <link rel="stylesheet" href="../DT/DataTables-1.10.23/css/dataTables.bootstrap4.min.css">
+    <title></title>
 </head>
 <body>
-<table>
-<tr>
-<td>
-ID AEROLINEA
-</td>
-<td>
-NOMBRE AEROLINEA
-</td>
-<td>
-DIRECCION
-</td>
-<td>
-TELEFONO
-</td>
-</tr>
+
+	
+<div class="user-var">
+  <div class="logodb">
+    <img src="../Recursos/thelogo.png">
+    
+  </div>
+  <div class="user">
+    <div class="img">
+     <img src="../Recursos/perfildeusuario.jpg" class="user-logo" >
+    </div>
+   
+    <p class="text-right" id="name">
+    <?php 
+     session_start();
+     $nom=$_SESSION['login']  ;    
+     echo "  Bienvenido $nom   ";
+  ?>
+    </p>
+  </div>
+</div>
+
+<form method="POST" class="show-t">
+<table id="tabla" class="table-responssive table-striped table-bordered" >
+<thead class="thead-light"> 
+    <th>
+       <?php
+require '../BD/conexion.php';
+$cons="SHOW COLUMNS FROM compañia FROM Air";
+$query=mysqli_query($conexion,$cons);
+while($fields=mysqli_fetch_row($query)){
+
+echo "
+
+<th> '$fields[0]' </th>
+"  ;
+}
+
+?>
+    </th>
+</thead>
 <?php
-include '../BD/conexion.php';
-$consulta= "SELECT *FROM compañia";
-$query =mysqli_query($conexion,$consulta);
-while ($datos=mysqli_fetch_array($query)){  
+
+require '../BD/conexion.php';
+$query ="SELECT *FROM  compañia";
+$consulta2=mysqli_query($conexion,$query);
+while ($consulta=mysqli_fetch_array($consulta2)){
 
 
-?>
-<tr>
-<td>
-<?php
-echo $datos ["id_aerolinea"]?>
-</td>
-<td>
-<?php
-echo $datos ["nom_aer"]
-?>
-</td>
-<td>
-<?php
-echo $datos ["dirac"]
-?>
-<td>
-<?php
-echo $datos ["tel"]
-?>
-</td>
-</td>
-</tr>
-<?php
+    
+
+echo '<tr>
+<td>' .$consulta['id_aerolinea']. '</td>
+<td>' .$consulta['nom_aer'].'</td>
+<td>'.$consulta['dirac'].'</td>
+<td>'.$consulta['tel'].'</td>
+<td><input type="checkbox" name="eliminar[]" value"  '.$consulta['id_aerolinea'].'"/> </td>
+</tr>';
 }
 ?>
 </table>
+
+<input type="submit" name="borrar" value="Eliminar" onclick="reload()" class="btn btn-danger"/>
+
+<?php
+require '../BD/conexion.php';
+if(isset($_POST['borrar'])){
+    if(empty($_POST['eliminar'])){
+        echo "<script>
+        alert('no se selecciono valor');
+        
+        </script>";
+    }
+    else {
+        foreach ($_POST['eliminar'] as $id_borrar) {
+            $borrar=$conexion->query("DELETE FROM compañia WHERE id_aerolinea='$id_borrar'");
+        }
+    }
+}
+
+?>
+
+
+</form>
+</div>
+<div  class="menu">
+  <h5 class = "icon-dat">
+    bases de datos
+</h5>
+<div class="data-bases">
+  <tr class="data">
+    <?php
+    require '../BD/conexion.php';
+    $sentenciasql="SHOW DATABASES";
+    $consulta=mysqli_query($conexion,$sentenciasql);
+    while($otra=mysqli_fetch_row($consulta)){
+      echo "
+      <tr >
+      {$otra[0]}
+      </tr>
+      <br>
+      ";
+    }
+
+  ?>
+  </tr>
+  <div class="tables">
+    <tr>
+
+    </tr>
+  </div>
+</div>
+  <div class="button-flo" onclick="togle()">
+    <img class="opc"src="../Recursos/more.png" >
+  </div>
+  <div class="col-md-4 col-md-offset-1" id="opciones">
+    
+      <li><a>Importar</a></li>
+      <li ><a href="#">Exportar</a></li>
+      <li><a href="UserView.php">Cuentas de Usuario</a></li>
+      <li><a>Bases de Datos</a></li>
+    
+  </div>
+</div>
+
+
+<script src="../js/jquery.js"></script>
+<script src="../js/app.js"> 
+<script src="../js/bootstrap.min.js"></script>
+<script src="../DT/DataTables-1.10.23/js/jquery.dataTables.min.js"></script>
+<script src="../DT/DataTables-1.10.23/js/dataTables.bootstrap4.min.js"></script>
+<script src="../js/dt.js"></script>
 </body>
 </html>
