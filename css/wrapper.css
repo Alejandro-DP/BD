@@ -159,3 +159,7 @@ a:hover{
 .inn>.no{
   margin: 3px;
 }
+.data-bases > li{
+  border: #cecaca 1px;
+
+}

@@ -8,8 +8,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5,minimum-scale=0.86">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-
-	  <link href="css/simple-sidebar.css" rel="stylesheet">
 	  <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
 </head>
 <body>
@@ -38,27 +36,25 @@
     bases de datos
 </h5>
 <div class="data-bases">
-  <tr class="data">
-    <?php
-    
-    require '../BD/conexion.php';
-    $sentenciasql="SHOW DATABASES";
-    $s="SHOW TABLES IN Air";
-    $consulta=mysqli_query($conexion,$sentenciasql);
-    while($otra=mysqli_fetch_row($consulta)){
-      echo "
-      <tr >
-      {$otra[0]}
-      </tr>
-      <br>
-      ";
-    }
-   
+  <?php
+require '../BD/conexion.php';
+$sentenciasql="SHOW DATABASES";
+$s="SHOW TABLES IN Air";
+$consulta=mysqli_query($conexion,$sentenciasql);
+
+while($otra=mysqli_fetch_row($consulta)){
+$dom = new DOMDocument('1.0', 'utf-8');
+$element = $dom->createElement('li',"{$otra[0]}");
+
+// Insertamos el nuevo elemento como raíz (hijo del documento)
+$dom->appendChild($element);
+echo $dom->saveXML();
+}
 
 
 
-  ?>
-  </tr>
+?>
+  
   <div class="tables">
     <tr>
 
