@@ -45,7 +45,7 @@
     <input class="form-control" type="text" name="apellidop" placeholder="Apellido Paterno">
     </div>
     <div>
-    <input class="form-control" type="text" name="apellidop" placeholder="Apellido Paterno">
+    <input class="form-control" type="text" name="apellidop" placeholder="Contraseña">
     </div>
     <div>
     <select  class="form-select" name="seleccion">
