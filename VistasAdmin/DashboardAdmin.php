@@ -40,8 +40,10 @@
 <div class="data-bases">
   <tr class="data">
     <?php
+    
     require '../BD/conexion.php';
     $sentenciasql="SHOW DATABASES";
+    $s="SHOW TABLES IN Air";
     $consulta=mysqli_query($conexion,$sentenciasql);
     while($otra=mysqli_fetch_row($consulta)){
       echo "
@@ -51,6 +53,9 @@
       <br>
       ";
     }
+   
+
+
 
   ?>
   </tr>
@@ -68,7 +73,7 @@
       <li><a href="Importar.php">Importar</a></li>
       <li ><a href="#">Exportar</a></li>
       <li><a href="UserView.php">Cuentas de Usuario</a></li>
-      <li><a>Bases de Datos</a></li>
+      <li><a href="../VistasAdmin/DashboardAdmin.php">Bases de Datos</a></li>
     
   </div>
 </div>
