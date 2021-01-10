@@ -53,7 +53,7 @@ echo "
 <?php
 
 require '../BD/conexion.php';
-$query ="SELECT *FROM cliente";
+$query ="SELECT *FROM  cliente";
 $consulta2=mysqli_query($conexion,$query);
 while ($consulta=mysqli_fetch_array($consulta2)){
 
@@ -61,15 +61,12 @@ while ($consulta=mysqli_fetch_array($consulta2)){
     
 
 echo '<tr>
-
-
-
-
 <td>' .$consulta['Id_cliente']. '</td>
-<td>'  .$consulta['Nom_clien'].'</td>
+<td>' .$consulta['Nom_clien'].'</td>
 <td>'.$consulta['Edad'].'</td>
 <td>'.$consulta['tel_cliente'].'</td>
-<td>'.$consulta['email'].'</td>
+<td>' .$consulta['email'].'</td>
+
 <td><input type="checkbox" name="eliminar[]" value"  '.$consulta['Id_cliente'].'"/> </td>
 </tr>';
 }
@@ -89,7 +86,7 @@ if(isset($_POST['borrar'])){
     }
     else {
         foreach ($_POST['eliminar'] as $id_borrar) {
-            $borrar=$conexion->query("DELETE FROM cliente WHERE Id_cliente='$id_borrar'");
+            $borrar=$conexion->query("DELETE FROM compañia WHERE Id_cliente='$id_borrar'");
         }
     }
 }
