@@ -143,11 +143,19 @@ a:hover{
   box-shadow: 1px 0px 15px 5px #00000075;
 }
 .content-registro{
+  -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
+  box-shadow: 1px 0px 15px 5px #00000075;
   margin-top: 50px;
   position: absolute;
   margin-left: 300px;
   background: #ffffff;
-  width: 400px;
+  width: 600px;
   height: 400px;
-
+  padding: 15px;
+}
+.inn>div{
+  margin: 15px;
+}
+.inn>.no{
+  margin: 3px;
 }

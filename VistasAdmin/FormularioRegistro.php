@@ -34,7 +34,7 @@
   </div>
 </div>
 <div class="content-registro">
-  <form action="../BD/NuevoRegistro.php" method="post" >
+  <form class="inn" action="../BD/NuevoRegistro.php" method="post" >
     <div>
       <input class="form-control" type="text" name="nombre" placeholder="nombre">
     </div>
