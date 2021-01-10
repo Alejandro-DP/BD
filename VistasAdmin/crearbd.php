@@ -29,9 +29,33 @@
      echo "  Bienvenido $nom   ";
   ?>
     </p>
+
+    
   </div>
 </div>
 <div  class="menu">
+<div class="content-registro">
+  <form class="inn" action="../BD/creacionbd.php" method="post" >
+    <div>
+      <input class="form-control" type="text" name="nombre" placeholder="Nombre de la base de datos">
+    </div>
+    <div>
+    <select  class="form-select" name="seleccion">
+     
+      <option value="#">armscii8_bin</option>
+      <option value="#">armscii8_general_ci</option>
+      <option value="#">armscii8_general_nopad_ci</option>
+      <option value="#">armscii8_nopad_bin</option>
+      
+
+    </select>
+    </div>
+    <div class="btn-group">
+    <input class="btn btn-success" type="submit" name="enviar" value="Registrar">
+    </div>
+  </form>
+
+</div>
   <h5 class = "icon-dat">
     bases de datos
 </h5>
@@ -66,7 +90,7 @@ echo $dom->saveXML();
   </div>
   <div class="col-md-4 col-md-offset-1" id="opciones">
     
-      <li><a href="../BD/crearbd.php">Crear Base De Datos</a></li>
+      <li><a href="../VistasAdmin/crearbd.php">Crear Base De Datos</a></li>
       <li><a href="Importar.php">Importar</a></li>
       <li ><a href="#">Exportar</a></li>
       <li><a href="UserView.php">Cuentas de Usuario</a></li>

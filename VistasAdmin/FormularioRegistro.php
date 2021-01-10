@@ -91,10 +91,11 @@
   </div>
   <div class="col-md-4 col-md-offset-1" id="opciones">
     
+      <li><a href="../VistasAdmin/crearbd.php">Crear base de datos</a></li>
       <li><a href="Importar.php">Importar</a></li>
       <li ><a href="#">Exportar</a></li>
       <li><a href="UserView.php">Cuentas de Usuario</a></li>
-      <li><a>Bases de Datos</a></li>
+      <li><a href="../VistasAdmin/DashboardAdmin.php">Bases de Datos</a></li>
     
   </div>
 </div>
