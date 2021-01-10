@@ -108,8 +108,8 @@ a:hover{
   background: white;
   margin-left: 300px;
   position: absolute;
-  width: 250px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
 }
 .cont-img-user{
   border-radius: 50%;
@@ -142,12 +142,3 @@ a:hover{
   -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
   box-shadow: 1px 0px 15px 5px #00000075;
 }
-/*#registro{
-  border-radius: 6px;
-  margin-top: 50px;
-  background: white;
-  margin-left: 300px;
-  position: absolute;
-  width: 250px;
-  height: 300px;
-}/*

@@ -56,7 +56,7 @@
     </p>
   </div>
 </div>
-<div class="col-md-4 col-md-offset-1" id="registro">
+<div class="card-body" id="user-content">
 
 </div>
 <div  class="menu">
