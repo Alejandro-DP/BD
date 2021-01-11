@@ -6,3 +6,14 @@ function togle() {
       x.style.display = "none";
     }
   }
+
+  function togle2(){
+    var y=document.getElementById("session-btn");
+    if(y.style.display==="none"){
+      y.style.display="block";
+
+    }
+    else{
+      y.style.display="none";
+    }
+  }

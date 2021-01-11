@@ -83,7 +83,7 @@ echo $dom->saveXML();
   </div>
   <div class="col-md-4 col-md-offset-1" id="opciones">
     
-      <li><a href="../BD/crearbd.php">Crear Base De Datos</a></li>
+      <li><a href="../VistasAdmin/crearbd.php">Crear Base De Datos</a></li>
       <li><a href="Importar.php">Importar</a></li>
       <li ><a href="#">Exportar</a></li>
       <li><a href="UserView.php">Cuentas de Usuario</a></li>

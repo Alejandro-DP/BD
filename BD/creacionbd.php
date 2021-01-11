@@ -19,14 +19,14 @@ if($query){
  echo "
  <script>
 alert('Base de datos creada con exito');
-location.href='../VistasAdmin/crearbd.php';
+location.href='../VistasAdmin/DashboardAdmin.php';
  </script>;
  
  ";}
 else{
     echo"
     alert('No se puedo crear la bd');
-    location.href='../VistasAdmin/crearbd.php';
+    location.href='../VistasAdmin/DashboardAdmin.php';
 
  </script>;
  

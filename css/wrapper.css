@@ -53,9 +53,9 @@ body{
   
   margin-left: 1270px;
   margin-top: 530px;
-  width: 70px;
-  height: 70px;
-  background: #0ED1AA;
+  width: 50px;
+  height: 50px;
+  background: #cdd1d0;
   border-radius: 50%;
   object-fit: cover;
 
@@ -63,8 +63,8 @@ body{
 .opc{
   opacity: 80%;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   font-size: xx-large;
   text-align:center;
   color: #ffffff;
@@ -146,13 +146,50 @@ a:hover{
   -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
   box-shadow: 1px 0px 15px 5px #00000075;
   margin-top: 50px;
-  position: absolute;
   margin-left: 300px;
   background: #ffffff;
+  position:absolute;
   width: 600px;
   height: 400px;
   padding: 15px;
 }
+.content-bdn{
+  -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
+  box-shadow: 1px 0px 15px 5px #00000075;
+  margin-top: 90px;
+  margin-left: 1020px;
+  background: #ffffff;
+  position:absolute;
+  width: 300px;
+  height: 300px;
+  padding: 15px;
+}
+.content-session{
+ height: 60px;
+ width: 150px;
+ background:white;
+ margin-left: 1050px;
+ position: absolute;
+ padding: 5px;
+ display: none;
+}
+#boton{
+
+  margin:5px;
+}
+.tabla-bd{
+  
+  -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
+  box-shadow: 1px 0px 15px 5px #00000075;
+  margin-top: 90px;
+  margin-left: 250px;
+  background: #ffffff;
+  position:absolute;
+  width: 700px;
+  height: 450px;
+  padding: 15px;
+}
+
 .inn>div{
   margin: 15px;
 }
