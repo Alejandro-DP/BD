@@ -61,14 +61,14 @@
   </form>
 
 </div>
+<form method="POST">
 <div class="contenedor" >
-
-<table class="tabla-bd">
-  <thead >
-    <tr class="table table-danger">
-      <th scope="col">Bases De Datos</th>
-      <th scope="col">Seleccionar</th>
-    </tr>
+    <table class="tabla-bd">
+      <thead >
+       <tr class="table table-danger">
+        <th scope="col">Eliminar Bases De Datos</th>
+        <th scope="col">Seleccionar</th>
+      </tr>
   </thead>
   <tbody>
     <?php
@@ -82,14 +82,38 @@
       $i[0]
       </td>
       <td>
-      <input type='checkbox' name='eliminar[]' value= 'sd'>
+      <input type='checkbox' name='eliminar[]' value='$i[0]'/>  
       </td>
       </tr>
       ";
     }
     ?>
+    <tr><td><input type="submit" name="borrar" value="Borrar Seleccion"  class="btn btn-danger"/></td></tr>
+    <?php
+     if(isset($_POST['borrar'])){
+       if(empty($_POST["eliminar"])){
+         echo "<script>
+         alert('no seleccionaste ningun campo');
+         
+         </script>";
+       }
+       else{
+         
+         foreach ($_POST["eliminar"] as $i) {
+          include '../BD/conexion.php';
+           $sem="DROP DATABASE $i";
+           $quer=mysqli_query($conexion,$sem);
+           echo "<script>
+           alert('Base de datos borrada con exito');
+           location.href='../VistasAdmin/DashboardAdmin.php';
+           </script>";  
+         }
+       }
+     }
+    ?>
   </tbody>
-</table>
+  </table>
+  </form> 
 </div>
 <div  class="menu">
   <h5 class = "icon-dat">
