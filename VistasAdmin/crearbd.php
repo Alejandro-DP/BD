@@ -51,7 +51,7 @@
     </select>
     </div>
     <div class="btn-group">
-    <input class="btn btn-success" type="submit" name="enviar" value="Registrar">
+    <input class="btn btn-success" type="submit" name="enviar" value="Crear">
     </div>
   </form>
 
@@ -88,7 +88,7 @@ echo $dom->saveXML();
   <div class="button-flo" onclick="togle()">
     <img class="opc"src="../Recursos/more.png" >
   </div>
-  <div class="col-md-4 col-md-offset-1" id="opciones">
+  <div class="col-md-5 col-md-offset-1" id="opciones">
     
       <li><a href="../VistasAdmin/crearbd.php">Crear Base De Datos</a></li>
       <li><a href="Importar.php">Importar</a></li>

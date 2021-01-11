@@ -53,8 +53,8 @@ body{
   
   margin-left: 1270px;
   margin-top: 530px;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   background: #0ED1AA;
   border-radius: 50%;
   object-fit: cover;
@@ -74,8 +74,8 @@ body{
   margin-left: 1050px;
   margin-top: 375px;
   position: absolute;
-  height: 150px;
-  width: 230px;
+  height: 170px;
+  width: 240px;
   background: #ffffff;
   display: none;
 }
