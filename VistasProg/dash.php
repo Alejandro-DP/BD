@@ -25,7 +25,7 @@
     <p class="text-right" id="name">
     <?php 
      session_start();
-     $nom=$_SESSION['login']  ;    
+     $nom=$_SESSION['login'];    
      echo "  Bienvenido $nom   ";
   ?>
     </p>
