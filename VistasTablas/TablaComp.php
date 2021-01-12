@@ -31,11 +31,16 @@
   </div>
 </div>
 
-<form method="POST" class="show-t">
-<table id="tabla" class="table-responssive table-striped table-bordered" >
-<thead class="thead-light"> 
-    <th>
-       <?php
+<form method="POST">
+<div class="contenedor" >
+    <table class="tabla-bd">
+      <thead >
+      
+       <tr class="table table-success">
+      <!--  <th scope="col">Eliminar Bases De Datos</th>
+        <th scope="col">Seleccionar</th>
+      </tr>-->
+      <?php
 require '../BD/conexion.php';
 $cons="SHOW COLUMNS FROM compañia FROM Air";
 $query=mysqli_query($conexion,$cons);
@@ -44,77 +49,128 @@ while($fields=mysqli_fetch_row($query)){
 echo "
 
 <th> '$fields[0]' </th>
+
 "  ;
 }
 
 ?>
-    </th>
-</thead>
-<?php
-
-require '../BD/conexion.php';
-$query ="SELECT *FROM  compañia";
-$consulta2=mysqli_query($conexion,$query);
-while ($consulta=mysqli_fetch_array($consulta2)){
-
-
-    
-
-echo '<tr>
-<td>' .$consulta['id_aerolinea']. '</td>
-<td>' .$consulta['nom_aer'].'</td>
-<td>'.$consulta['dirac'].'</td>
-<td>'.$consulta['tel'].'</td>
-<td><input type="checkbox" name="eliminar[]" value"  '.$consulta['id_aerolinea'].'"/> </td>
-</tr>';
-}
-?>
-</table>
-
-<input type="submit" name="borrar" value="Eliminar" onclick="reload()" class="btn btn-danger"/>
-
-<?php
-require '../BD/conexion.php';
-if(isset($_POST['borrar'])){
-    if(empty($_POST['eliminar'])){
-        echo "<script>
-        alert('no se selecciono valor');
-        
-        </script>";
+<th> Seleccion Eliminar </th>
+<th> Seleccion Modificar <th>
+</tr>
+  </thead>
+  <tbody>
+    <?php
+     require '../BD/conexion.php';
+    $c="SELECT *FROM compañia";
+    $q=mysqli_query($conexion,$c);
+    while($i=mysqli_fetch_array($q)){
+      echo "
+      <tr>
+      <td>
+      $i[id_aerolinea]
+      </td>
+      <td>
+      $i[nom_aer]
+      </td>
+      <td>
+      $i[dirac]
+      </td>
+      <td>
+      $i[tel]
+      </td>
+      <td>
+      <input type='checkbox' name='eliminar[]' value='$i[id_aerolinea]'/>  
+      </td>
+      <td>
+      <input type='checkbox' name='modificar[]' value='$i[id_aerolinea]'/>
+      </td>
+      </tr>
+      ";
     }
-    else {
-        foreach ($_POST['eliminar'] as $id_borrar) {
-            $borrar=$conexion->query("DELETE FROM compañia WHERE id_aerolinea='$id_borrar'");
-        }
-    }
-}
+    ?>
+    <tr><td><input type="submit" name="Agregar" value="Agregar" onclick="window.open('../VistasTablas/Nc.php')" class="btn btn-primary"/></td>
+    <td><input type="submit" name="modi" value="Modificar"  class="btn btn-warning"/></td>
+    <td><input type="submit" name="borrar" value="Eliminar"  class="btn btn-danger"/></td>
+    </tr>
 
-?>
+    <?php
+     if(isset($_POST['borrar'])){
+       if(empty($_POST["eliminar"])){
+         echo "<script>
+         alert('no seleccionaste ningun campo');
+         
+         </script>";
+       }
+       else{
+         
+         foreach ($_POST["eliminar"] as $i) {
+          include '../BD/conexion.php';
+           $sem="DELETE FROM compañia WHERE id_aerolinea=$i";
+           $quer=mysqli_query($conexion,$sem);
+           echo "<script>
+           alert('Elemento Eliminado Con Exito');
+           location.href='../VistasTablas/TablaClientes.php';
+           </script>";  
+         }
+       }
+     }
+    ?>
 
+<?php
+     if(isset($_POST['modi'])){
+       if(empty($_POST["modificar"])){
+         echo "<script>
+         alert('no seleccionaste ningun campo');
+         
+         </script>";
+       }
+       else{
+         
+         foreach ($_POST["modificar"] as $i) {
+           include '../BD/conexion.php';
+           echo "<script>
+           var nn=prompt('Nueva Aerollinea');
+           var ne=prompt('Nueva Direccion');
+           var nt=prompt('Nuevo Telefono');
+          
+           </script>";
+           $nom="<script>document.write(nn)</script>";
+           $ed="<script>document.write(ne)</script>";
+           $tel="<script>document.write(nt)</script>";
+           $corr="<script>document.write(nc)</script>";
 
-</form>
+         }
+       }
+     }
+    ?>
+  </tbody>
+  </table>
+  </form> 
 </div>
 <div  class="menu">
-  <h5 class = "icon-dat">
+<h5 class = "icon-dat">
     bases de datos
 </h5>
 <div class="data-bases">
-  <tr class="data">
-    <?php
-    require '../BD/conexion.php';
-    $sentenciasql="SHOW DATABASES";
-    $consulta=mysqli_query($conexion,$sentenciasql);
-    while($otra=mysqli_fetch_row($consulta)){
-      echo "
-      <tr >
-      {$otra[0]}
-      </tr>
-      <br>
-      ";
-    }
+  <?php
+require '../BD/conexion.php';
+$sentenciasql="SHOW DATABASES";
+$s="SHOW TABLES IN Air";
+$consulta=mysqli_query($conexion,$sentenciasql);
 
-  ?>
-  </tr>
+while($otra=mysqli_fetch_row($consulta)){
+$dom = new DOMDocument('1.0', 'utf-8');
+$element = $dom->createElement('li',"{$otra[0]}");
+
+// Insertamos el nuevo elemento como raíz (hijo del documento)
+$dom->appendChild($element);
+echo $dom->saveXML();
+}
+
+
+
+?>
+  
   <div class="tables">
     <tr>
 
