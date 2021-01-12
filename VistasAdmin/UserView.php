@@ -37,17 +37,18 @@
     </div>
 
 </div>
-<div class="usuariose">
-  <h6 class="text-center"> Usuarios  </h6>
+<div >
   <?php
   include '../BD/conexion.php';
   $qw="SELECT *FROM usuarios WHERE id=1";
   $qy=mysqli_query($conexion,$qw);
   while($ftr=mysqli_fetch_array($qy)){
     echo"
-    <table class='table'>
+    <table class='usuariose'>
   <thead>
     <tr>
+      <th> <img src='../Recursos/user-img.png' heigth='80' width='80'> </th>
+    </tr>
       <th scope='col'>Nombre</th>
       <th scope='col'>$ftr[nombre]</th>
       
@@ -68,7 +69,7 @@
     </tr>
     <tr>
       <th scope='row'>Tipo De Usuario</th>
-      <td>$ftr[id]</td>
+      <td>$ftr[id_cargoo]</td>
     </tr>
   </tbody>
 </table>
@@ -76,6 +77,167 @@
   }
   ?>
 </div>
+<div >
+  <?php
+  include '../BD/conexion.php';
+  $qw="SELECT *FROM usuarios WHERE id=2";
+  $qy=mysqli_query($conexion,$qw);
+  while($ftr=mysqli_fetch_array($qy)){
+    echo"
+    <table class='usuariose2'>
+  <thead>
+    <tr>
+      <th> <img src='../Recursos/user-img.png' heigth='80' width='80'> </th>
+    </tr>
+      <th scope='col'>Nombre</th>
+      <th scope='col'>$ftr[nombre]</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope='row'>Id</th>
+      <td>$ftr[id]</td>
+    </tr>
+    <tr>
+      <th scope='row'>Apellido Paterno</th>
+      <td>$ftr[apellidop]</td>
+    </tr>
+    <tr>
+      <th scope='row'>Apellido Materno</th>
+      <td>$ftr[apellidom]</td>
+    </tr>
+    <tr>
+      <th scope='row'>Tipo De Usuario</th>
+      <td>$ftr[id_cargoo]</td>
+    </tr>
+  </tbody>
+</table>
+    ";
+  }
+  ?>
+</div>
+<div >
+  <?php
+  include '../BD/conexion.php';
+  $qw="SELECT *FROM usuarios WHERE id=3";
+  $qy=mysqli_query($conexion,$qw);
+  while($ftr=mysqli_fetch_array($qy)){
+    echo"
+    <table class='usuariose3'>
+  <thead>
+    <tr>
+      <th> <img src='../Recursos/user-img.png' heigth='80' width='80'> </th>
+    </tr>
+      <th scope='col'>Nombre</th>
+      <th scope='col'>$ftr[nombre]</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope='row'>Id</th>
+      <td>$ftr[id]</td>
+    </tr>
+    <tr>
+      <th scope='row'>Apellido Paterno</th>
+      <td>$ftr[apellidop]</td>
+    </tr>
+    <tr>
+      <th scope='row'>Apellido Materno</th>
+      <td>$ftr[apellidom]</td>
+    </tr>
+    <tr>
+      <th scope='row'>Tipo De Usuario</th>
+      <td>$ftr[id_cargoo]</td>
+    </tr>
+  </tbody>
+</table>
+    ";
+  }
+  ?>
+</div>
+<div >
+  <?php
+  include '../BD/conexion.php';
+  $qw="SELECT *FROM usuarios WHERE id=4";
+  $qy=mysqli_query($conexion,$qw);
+  while($ftr=mysqli_fetch_array($qy)){
+    echo"
+    <table class='usuariose4'>
+  <thead>
+    <tr>
+      <th> <img src='../Recursos/user-img.png' heigth='80' width='80'> </th>
+    </tr>
+      <th scope='col'>Nombre</th>
+      <th scope='col'>$ftr[nombre]</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope='row'>Id</th>
+      <td>$ftr[id]</td>
+    </tr>
+    <tr>
+      <th scope='row'>Apellido Paterno</th>
+      <td>$ftr[apellidop]</td>
+    </tr>
+    <tr>
+      <th scope='row'>Apellido Materno</th>
+      <td>$ftr[apellidom]</td>
+    </tr>
+    <tr>
+      <th scope='row'>Tipo De Usuario</th>
+      <td>$ftr[id_cargoo]</td>
+    </tr>
+  </tbody>
+</table>
+    ";
+  }
+  ?>
+</div>
+<div >
+  <?php
+  include '../BD/conexion.php';
+  $qw="SELECT *FROM usuarios WHERE id=5";
+  $qy=mysqli_query($conexion,$qw);
+  while($ftr=mysqli_fetch_array($qy)){
+    echo"
+    <table class='usuariose5'>
+  <thead>
+    <tr>
+      <th> <img src='../Recursos/user-img.png' heigth='80' width='80'> </th>
+    </tr>
+      <th scope='col'>Nombre</th>
+      <th scope='col'>$ftr[nombre]</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope='row'>Id</th>
+      <td>$ftr[id]</td>
+    </tr>
+    <tr>
+      <th scope='row'>Apellido Paterno</th>
+      <td>$ftr[apellidop]</td>
+    </tr>
+    <tr>
+      <th scope='row'>Apellido Materno</th>
+      <td>$ftr[apellidom]</td>
+    </tr>
+    <tr>
+      <th scope='row'>Tipo De Usuario</th>
+      <td>$ftr[id_cargoo]</td>
+    </tr>
+  </tbody>
+</table>
+    ";
+  }
+  ?>
+</div>
+
 <div  class="menu">
   <h5 class = "icon-dat">
     bases de datos
