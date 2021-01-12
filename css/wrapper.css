@@ -46,7 +46,7 @@ body{
 .menu{
   display: flex;
   background: white;
-  width: 200px;
+  width: 400px;
   height: 605px;
 }
 .button-flo{
@@ -127,7 +127,7 @@ a:hover{
 .data-bases{
   position: absolute;
   margin-left: 20px;
-  width: 140px;
+  width: 400px;
   margin-top: 90px;
   
 }

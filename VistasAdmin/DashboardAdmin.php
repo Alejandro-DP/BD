@@ -125,7 +125,6 @@ require '../BD/conexion.php';
 $sentenciasql="SHOW DATABASES";
 $s="SHOW TABLES IN Air";
 $consulta=mysqli_query($conexion,$sentenciasql);
-
 while($otra=mysqli_fetch_row($consulta)){
 $dom = new DOMDocument('1.0', 'utf-8');
 $element = $dom->createElement('li',"{$otra[0]}");
@@ -134,6 +133,15 @@ $element = $dom->createElement('li',"{$otra[0]}");
 $dom->appendChild($element);
 echo $dom->saveXML();
 }
+echo "<h6> Tablas En Air  </h6>";
+$consulta2=mysqli_query($conexion,$s);
+while($otra2=mysqli_fetch_array($consulta2)){
+  echo"
+  
+  <a href='../VistasTablas/TablaClientes.php'><li>$otra2[0]</li></a>
+  ";
+}
+
 
 
 
@@ -152,7 +160,7 @@ echo $dom->saveXML();
     
      
       <li><a href="Importar.php">Importar</a></li>
-      <li ><a href="#">Exportar</a></li>
+      <li ><a href="UserView.php">Usuarios</a></li>
       <li><a href="FormularioRegistro.php">Crear Usuario</a></li>
       
     
