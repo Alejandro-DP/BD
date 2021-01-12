@@ -46,8 +46,8 @@ body{
 .menu{
   display: flex;
   background: white;
-  width: 400px;
-  height: 605px;
+  width: 200px;
+  height: 900px;
 }
 .button-flo{
   
@@ -146,7 +146,7 @@ a:hover{
   -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
   box-shadow: 1px 0px 15px 5px #00000075;
   margin-top: 50px;
-  margin-left: 300px;
+  margin-left: 450px;
   background: #ffffff;
   position:absolute;
   width: 600px;
@@ -238,7 +238,7 @@ a:hover{
   -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
   box-shadow: 1px 0px 15px 5px #00000075;
   margin-top: 90px;
-  margin-left: 250px;
+  margin-left: 300px;
   background: #ffffff;
   position:absolute;
   width: 700px;
