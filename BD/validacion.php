@@ -27,8 +27,10 @@ location.href='../VistasAdmin/DashboardAdmin.php';
 }
 else
 if ($fias['id_cargoo']==2) {
+	session_start();
+	$_SESSION['login']=$nombr;
 	echo"<script>
-      location.href='../VistaProg/Dash.php';
+      location.href='../VistasProg/dash.php';
 	</script>";
 }
 
