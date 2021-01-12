@@ -22,16 +22,17 @@ alert('Base de datos creada con exito');
 location.href='../VistasAdmin/DashboardAdmin.php';
  </script>;
  
- ";}
+ ";
+}
 else{
-    echo"
+    echo "
     alert('No se puedo crear la bd');
     location.href='../VistasAdmin/DashboardAdmin.php';
 
  </script>;
  
- "
-;
+ ";
+
 }
 
 }

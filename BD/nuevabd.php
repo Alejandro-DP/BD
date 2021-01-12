@@ -2,7 +2,7 @@
 require '../BD/conexion.php';
 
 $nombre=$_POST["nombre"];
-$bd=$_POST["bd"];
+$bd=$_POST["archivo"];
 
 if (empty($nombre) || empty($bd)){
 echo "
@@ -31,7 +31,7 @@ else{
 
         <script>
         alert('Base de datos creada');
-        location.href='../VistasAdmin/Importar.php';
+        location.href='../VistasAdmin/DashboardAdmin.php';
         </script>;
         
         "

@@ -88,7 +88,7 @@
       ";
     }
     ?>
-    <tr><td><input type="submit" name="borrar" value="Borrar Seleccion"  class="btn btn-danger"/></td></tr>
+    <tr><td><input type="submit" name="borrar" value="Borrar Base(s) De Datos"  class="btn btn-danger"/></td></tr>
     <?php
      if(isset($_POST['borrar'])){
        if(empty($_POST["eliminar"])){
@@ -141,7 +141,7 @@ echo $dom->saveXML();
   
   <div class="tables">
     <tr>
-
+-
     </tr>
   </div>
 </div>
@@ -150,7 +150,6 @@ echo $dom->saveXML();
   </div>
   <div class="col-md-4 col-md-offset-1" id="opciones">
     
-      <li><a href="../VistasAdmin/crearbd.php">Crear Base De Datos</a></li>
       <li><a href="Importar.php">Importar</a></li>
       <li ><a href="#">Exportar</a></li>
       <li><a href="UserView.php">Cuentas de Usuario</a></li>
