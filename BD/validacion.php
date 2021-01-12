@@ -27,9 +27,8 @@ location.href='../VistasAdmin/DashboardAdmin.php';
 }
 else
 if ($fias['id_cargoo']==2) {
-	echo "Programador";
 	echo"<script>
-      alert('faltan modificaciones);
+      location.href='../VistaProg/Dash.php';
 	</script>";
 }
 
