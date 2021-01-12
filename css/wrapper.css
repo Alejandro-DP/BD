@@ -246,6 +246,17 @@ a:hover{
   padding: 15px;
 }
 
+.tabla-bd2{
+  -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
+  box-shadow: 1px 0px 15px 5px #00000075;
+  margin-top: 90px;
+  margin-left: 250px;
+  background: #ffffff;
+  position:absolute;
+  width: 700px;
+  height: 450px;
+  padding: 15px;
+}
 .importarbd-bd{
   -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
   box-shadow: 1px 0px 15px 5px #00000075;
