@@ -1,16 +1,16 @@
 body{
- background: #cecaca;
+  background: #cecaca;
 }
 
 .user-var{
-  display: flex;
+  
   background: #0ED1AA;
-  width: 1366px;
-  height: 50px;
+  
+ /* height: 50px;
   opacity: 80%;
   -webkit-box-shadow: 0px 5px 5px 0px  rgba(0, 0, 0, 0.774); 
   box-shadow: 0px 5px 15px 0px #56aeb49d;
-  
+  */
 }
 .user{
   display: flex;
@@ -51,13 +51,15 @@ body{
 }
 .button-flo{
   
-  margin-left: 1270px;
-  margin-top: 530px;
-  width: 50px;
-  height: 50px;
-  background: #cdd1d0;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 3.75rem;
+  height: 3.75rem;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  text-align: center;
+  background: #cecaca;
+  line-height: 46px;
+  
 
 }
 .opc{
@@ -221,12 +223,7 @@ a:hover{
   padding: 15px;
 }
 .content-session{
- height: 60px;
- width: 150px;
- background:white;
- margin-left: 1050px;
- position: absolute;
- padding: 5px;
+
  display: none;
 }
 #boton{
