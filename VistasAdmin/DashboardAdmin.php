@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../css/sb-admin-2.min.css">
 	  <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
 </head>
-<body id="page-top">
+<body id="page-top ">
   <div class=" navbar navbar-expand  bg-success topbar  static-top shadow"">
     <div class="logodb">
       <img src="../Recursos/thelogo.png">
@@ -75,12 +75,19 @@
           while($otra=mysqli_fetch_row($consulta)){
             $dom = new DOMDocument('1.0', 'utf-8');
             $element = $dom->createElement('li',"{$otra[0]}");
+          
             $dom->appendChild($element);
             echo $dom->saveXML();
           }
         ?>
+      
         </div>
       </div>
+        
+
+      <!-- Aqui Pon Tus Tablas-->  
+
+
 
     <!-- boton flotante -->
       <div class="button-flo " onclick="togle()">
@@ -96,7 +103,7 @@
 
   
   <script src="../js/app.js"></script>
-  <script src="../js/jquery/jquery.min.js"></script>
-  <script src="../js/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../Dash/jquery/jquery.min.js"></script>
+  <script src="../Dash/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
