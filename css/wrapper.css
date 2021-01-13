@@ -73,11 +73,16 @@ body{
   object-fit: cover;
 }
 #opciones{
-  margin-left: 1050px;
-  margin-top: 375px;
-  position: absolute;
+  
+  
   height: 170px;
   width: 240px;
+  position: fixed;
+  right: 3rem;
+  bottom: 5rem;
+  text-align: center;
+  background: #cecaca;
+  line-height: 48px;
   background: #ffffff;
   display: none;
 }
