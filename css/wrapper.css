@@ -134,7 +134,7 @@ a:hover{
 .data-bases{
   position: absolute;
   margin-left: 20px;
-  width: 400px;
+  width: 50px;
   margin-top: 90px;
   
 }
@@ -219,13 +219,14 @@ a:hover{
 .content-bdn{
   -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
   box-shadow: 1px 0px 15px 5px #00000075;
-  margin-top: 90px;
-  margin-left: 1020px;
+  margin-top: 500px;
+  margin-left: 1000px;
   background: #ffffff;
   position:absolute;
   width: 300px;
   height: 300px;
   padding: 15px;
+  border-radius: 7px;
 }
 .content-session{
 
@@ -272,12 +273,15 @@ a:hover{
 }
 
 .inn>div{
-  margin: 15px;
+  margin: 20px;
 }
-.inn>.no{
-  margin: 3px;
-}
-.data-bases > li{
-  border: #cecaca 1px;
 
+
+.content-bdn{
+  color: black;
+}
+
+.data-bases>.acord{
+  height: 23px;
+  width: 50px;
 }

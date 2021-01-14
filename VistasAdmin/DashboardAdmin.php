@@ -60,7 +60,24 @@
             <input class="btn btn-success" type="submit" name="enviar" value="Crear">
           </div>
         </form> -->
-
+      <!-- Aqui Pon Tus Tablas-->  
+        <div class="content-bdn">
+        <h6 class=""text-center"">Crear Base De Datos</h6>
+        <form class="inn" action="../BD/creacionbd.php" method="post">
+        <div class="form-group">
+        <input class="form-control" type="text" name="nombre" placeholder="Nombre de la base de datos">
+        </div>
+        <select class="form-select form-select-sm" name="seleccion">
+          <option value="#">armscii8_bin</option>
+          <option value="#">armscii8_general_ci</option>
+          <option value="#">armscii8_general_nopad_ci</option>
+          <option value="#">armscii8_nopad_bin</option>
+        </select>
+        <div class="btn-group">
+          <input class="btn btn-success " type="submit" name="enviar" value="Crear">
+        </div>
+        </form>
+        </div>
 
       </div>
       <!-- Menu lateral-->
@@ -74,18 +91,17 @@
           $consulta=mysqli_query($conexion,$sentenciasql);
           while($otra=mysqli_fetch_row($consulta)){
             $dom = new DOMDocument('1.0', 'utf-8');
-            $element = $dom->createElement('li',"{$otra[0]}");
-          
-            $dom->appendChild($element);
+            
+                echo '<li class="acord"  />' .($otra[0])."\n";
+            
             echo $dom->saveXML();
-          }
+            }
         ?>
       
         </div>
       </div>
         
 
-      <!-- Aqui Pon Tus Tablas-->  
 
 
 
