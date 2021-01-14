@@ -134,7 +134,7 @@ a:hover{
 .data-bases{
   position: absolute;
   margin-left: 20px;
-  width: 50px;
+  width: 400px;
   margin-top: 90px;
   
 }
@@ -282,6 +282,8 @@ a:hover{
 }
 
 .data-bases>.acord{
-  height: 23px;
-  width: 50px;
+  height: 40px;
+  width: 150px;
+  margin-bottom: 20px;
+  border-bottom: #0ed1aa8a solid 0.5px;
 }
