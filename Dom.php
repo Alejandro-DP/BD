@@ -19,47 +19,46 @@ $consulta=mysqli_query($conexion,$sentenciasql);
 
 </head>
 <body>
-    <div>
-<?php    
-while($otra=mysqli_fetch_row($consulta)){
-    $dom = new DOMDocument('1.0', 'utf-8');
-    
-        echo '<button class="btn btn-primary" data-bs-toggle="collapse" role="button" href="#'.htmlspecialchars($otra[0]).'" value="' . htmlspecialchars($otra[0]) . '" />' .($otra[0])."\n";
-    
-    echo $dom->saveXML();
-    }
-?>
-</div>
-<div class="collapse " id="air">
-  <div class="card card-body">
-    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-  </div>
-</div>
+<div >
+  <?php
+  include './BD/conexion.php';
+  $qw="SELECT *FROM usuarios ";
+  $qy=mysqli_query($conexion,$qw);
+  while($ftr=mysqli_fetch_array($qy)){
+    echo"
+    <table class='usuariose5'>
+  <thead>
+    <tr>
+      <th> <img src='./Recursos/user-img.png' heigth='80' width='80'> </th>
+    </tr>
+      <th scope='col'>Nombre</th>
+      <th scope='col'>$ftr[nombre]</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope='row'>Id</th>
+      <td>$ftr[id]</td>
+    </tr>
+    <tr>
+      <th scope='row'>Apellido Paterno</th>
+      <td>$ftr[apellidop]</td>
+    </tr>
+    <tr>
+      <th scope='row'>Apellido Materno</th>
+      <td>$ftr[apellidom]</td>
+    </tr>
+    <tr>
+      <th scope='row'>Tipo De Usuario</th>
+      <td>$ftr[id_cargoo]</td>
+    </tr>
+  </tbody>
+</table>
+    ";
+  }
+  ?>
 
-<!-- ejemplo de collapse-->
-
-
-<ul class="collapsible">
-    <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-  </ul>
-
-
-
-  <script>
-    $(document).ready(function(){
-    $('.collapsible').collapsible();
-  });
         
 
  </script>
