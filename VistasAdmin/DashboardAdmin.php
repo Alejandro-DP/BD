@@ -67,7 +67,8 @@
 
       <!--colocar aqui el form con table para poder eliminar bd-->
 <div >
- <form method="POST">
+ <form method="POST" class="taba">
+   <table>
     <thead>
       <tr>
         <th>Eliminar Bases De Datos</th>

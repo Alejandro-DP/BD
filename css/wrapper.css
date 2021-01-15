@@ -172,6 +172,20 @@ a:hover{
   padding: 15px;
   display:inline-block;
 }
+.taba{
+  -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
+  box-shadow: 1px 0px 15px 5px #00000075;
+  margin-top: 100px;
+  margin-left: -1000px;
+  background: #ffffff;
+  position:absolute;
+  width: 600px;
+  height: 400px;
+  padding: 15px;
+  border-radius: 7px;
+  
+}
+
 
 .content-bdn{
   -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
