@@ -39,33 +39,7 @@
       <button class="btn btn-danger" id="boton" onclick="location='../BD/cs.php'"> Cerrar Sesion   </buton>
     </div>
     </div>
-
-      <!--Card Crear Nueva BD -->
-      <!--
-    <div class="content-bdn">
-      <h6 class="text-center"> Nueva Base De Datos  </h6>
-      <form class="inn" action="../BD/creacionbd.php" method="post" >
-        <div>
-        <input class="form-control" type="text" name="nombre" placeholder="Nombre de la base de datos">
-        </div>
-        <div>
-        <select  class="form-select" name="seleccion">
-          <option value="#">armscii8_bin</option>
-          <option value="#">armscii8_general_ci</option>
-          <option value="#">armscii8_general_nopad_ci</option>
-          <option value="#">armscii8_nopad_bin</option>
-        </select>
-        </div>
-          <div class="btn-group">
-            <input class="btn btn-success" type="submit" name="enviar" value="Crear">
-          </div>
-        </form> -->
-      <!-- Aqui Pon Tus Tablas-->  
-      
-
-
-
-      <!--colocar aqui el form con table para poder eliminar bd-->
+    <!--falta agregar el jtable-->
 <div >
  <form method="POST" class="taba">
    <table>
@@ -75,8 +49,8 @@
         <th>Seleccion</th>   
       </tr>
     </thead>
-    <tbody>
-      <?php
+      <tbody>
+       <?php
         include '../BD/conexion.php';
           $sentencia=mysqli_query($conexion,"SHOW DATABASES");
             while($fr=mysqli_fetch_row($sentencia)){
@@ -87,37 +61,36 @@
                 </tr>
               ";
               }
-      ?>
-    </tbody>
-    <tfoot>
-       <tr>
-         <th><input type="submit" name="borrar" value="Eliminar Seleccion(es)" class="btn btn-danger"></th>
-       </tr>
-    </tfoot>
-      <?php
-        if(isset($_POST['borrar'])){
-        if(empty($_POST["eliminar"])){
-        echo "<script>
-        alert('no seleccionaste ningun campo');  
-        location.href='../VistasAdmin/DashboardAdmin.php';
-        </script>";
-        }
-       else{
-         
-         foreach ($_POST["eliminar"] as $fr) {
-          include '../BD/conexion.php';
-           $sem="DROP DATABASE $fr";
-           $quer=mysqli_query($conexion,$sem);
-           echo "<script>
-           alert('Base de datos borrada con exito');
-           location.href='../VistasAdmin/DashboardAdmin.php';
-           </script>";  
-         }
-        }
-      }
-     ?>
+       ?>
+      </tbody>
+        <tfoot>
+           <tr>
+            <th><input type="submit" name="borrar" value="Eliminar Seleccion(es)" class="btn btn-danger"></th>
+           </tr>
+        </tfoot>
+         <?php
+          if(isset($_POST['borrar'])){
+          if(empty($_POST["eliminar"])){
+          echo "<script>
+          alert('no seleccionaste ningun campo');  
+          location.href='../VistasAdmin/DashboardAdmin.php';
+          </script>";
+            }
+              else{
+                foreach ($_POST["eliminar"] as $fr) {
+                  include '../BD/conexion.php';
+                    $sem="DROP DATABASE $fr";
+                    $quer=mysqli_query($conexion,$sem);
+                    echo "<script>
+                    alert('Base de datos borrada con exito');
+                    location.href='../VistasAdmin/DashboardAdmin.php';
+                    </script>";  
+                    }
+                  }
+            }
+         ?>
     </table>
- </form>
+  </form>
 </div>
 
         <div class="content-bdn">
@@ -137,7 +110,6 @@
         </div>
         </form>
         </div>
-
       </div>
       <!-- Menu lateral-->
       <div class=" wrapper navbar-nav bg-white sidebar sidebar-dark accordion"> 
@@ -150,20 +122,12 @@
           $consulta=mysqli_query($conexion,$sentenciasql);
           while($otra=mysqli_fetch_row($consulta)){
             $dom = new DOMDocument('1.0', 'utf-8');
-            
-                echo '<li class="acord"  />' .($otra[0])."\n";
-            
+                echo '<li class="acord"  />' .($otra[0])."\n";  
             echo $dom->saveXML();
             }
         ?>
-      
         </div>
       </div>
-        
-
-
-
-
     <!-- boton flotante -->
       <div class="button-flo " onclick="togle()">
         <img class="opc"src="../Recursos/more.png" >
