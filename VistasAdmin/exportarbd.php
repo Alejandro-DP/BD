@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="../css/dash.css">
   <link rel="stylesheet" href="../css/sb-admin-2.min.css">
 	  <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
+    <link rel="stylesheet" type="text/css" href="../css/miestilo.css">
+
 </head>
 <body id="page-top ">
   <div class=" navbar navbar-expand  bg-success topbar  static-top shadow"">
@@ -42,7 +44,16 @@
     </div>
     </div>
     <!--              DataTables                           -->
-    
+
+                            <div class="vista">
+                              <form>
+                                <?php
+                                  include '../BD/conexion.php';
+
+                                ?>
+                                
+                              </form>
+                            </div>
       <!-- Menu lateral-->
       <div class=" wrapper navbar-nav bg-white sidebar sidebar-dark accordion"> 
         <h5 class = "icon-dat">Bases De Datos</h5>
