@@ -114,11 +114,13 @@
       <div class="opciones-toggle" onclick = "opc()">
       <?php
       require '../BD/conexion.php';
-      $sentenciasql = "SHOW TABLES IN AiR";
+      $sentenciasql = "SHOW TABLES IN Air";
       $consulta=mysqli_query($conexion,$sentenciasql);
       while($op=mysqli_fetch_row($consulta)){
+        
         echo '<a class="t-opc" href="' . htmlspecialchars($op[0]) . '" />'.($op[0])."\n";
 
+       
       }
       ?>
       </div>
