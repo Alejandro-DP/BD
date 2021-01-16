@@ -17,3 +17,14 @@ function togle() {
       y.style.display="none";
     }
   }
+  
+  function opc(){
+    var y=document.getElementById("air");
+    if(y.style.display==="none"){
+      y.style.display="block";
+
+    }
+    else{
+      y.style.display="none";
+    }
+  }

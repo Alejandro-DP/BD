@@ -4,10 +4,14 @@
     background: #fff;
     position: absolute;
     margin-top: 6.2rem;
-    margin-left: 11rem;
+    margin-left: 13rem;
+    display: none;
 }
-.t-opc:link, .t-opc:visited, .t-opc:active{
-    display: inline-block;
+.t-opc:link,  .t-opc:active{
+    display: block;
     text-decoration: none;
     color: black;
+    height: 23px;
+    width: 50px;
 }
+

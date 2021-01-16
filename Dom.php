@@ -16,6 +16,7 @@ $consulta=mysqli_query($conexion,$sentenciasql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/dash.css">
+    <link rel="stylesheet" type="text/css" href="./css/wrapper.css">
 
     <title>Document</title>
 
@@ -23,44 +24,15 @@ $consulta=mysqli_query($conexion,$sentenciasql);
 <body>
 <div >
 <?php
-    include './BD/conexion.php';
-    $qw="SELECT *FROM usuarios";
-    $qy=mysqli_query($conexion,$qw);
-    while($ftr=mysqli_fetch_array($qy)){
-      //hay que modificar la propiedad de css usuariose lo intente pero el resultado es el que ves
-    echo"
-    <table class='usuariose'>
-      <thead>
-        <tr>
-          <th> <img src='./Recursos/user-img.png' heigth='80' width='80'> </th>
-        </tr>
-        <tr>
-          <th scope='col'>Nombre</th>
-        <th scope='col'>$ftr[nombre]</th>
-        </tr>
-      </thead>
-        <tbody>
-          <tr>
-            <td>Id</td>
-              <td>$ftr[id]</td>
-          </tr>
-          <tr>
-            <td>Apellido Paterno</td>
-              <td>$ftr[apellidop]</td>
-          </tr>
-          <tr>
-            <td>Apellido Materno</td>
-              <td>$ftr[apellidom]</td>
-          </tr>
-          <tr>
-            <td>Tipo De Usuario</td>
-              <td>$ftr[id_cargoo]</td>
-          </tr>
-        </tbody>
-      </table>
-    ";
-  }
-  ?>
+      require './BD/conexion.php';
+      $sentenciasql = "SHOW TABLES IN AiR";
+      $consulta=mysqli_query($conexion,$sentenciasql);
+      while($op=mysqli_fetch_row($consulta)){
+      
+        echo '<a class="t-opc" href="' . htmlspecialchars($op[0]) . '" />'.($op[0])."\n";
+
+      }
+      ?>
    <script src="./js/jquery.js"></script>
   <script src="./js/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
