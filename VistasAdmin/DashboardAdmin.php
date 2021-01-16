@@ -14,7 +14,7 @@
 	  <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
 </head>
 <body id="page-top ">
-  <div class=" navbar navbar-expand  bg-success topbar  static-top shadow"">
+  <div class=" navbar navbar-expand  bg-success topbar  static-top shadow">
     <div class="logodb">
       <img src="../Recursos/thelogo.png">
       
@@ -146,7 +146,7 @@
       <div class="col-md-4 col-md-offset-1" id="opciones">
       <li><a href="FormularioRegistro.php">Crear Usuario</a></li>
         <li><a href="Importar.php">Importar</a></li>
-        <li ><a href="#">Exportar</a></li>
+        <li ><a href="exportarbd.php">Exportar</a></li>
         <li><a href="UserView.php">Cuentas de Usuario</a></li>
       </div>
   </div>

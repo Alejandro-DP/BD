@@ -1,0 +1,10 @@
+.vista{
+    -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
+    box-shadow: 1px 0px 15px 5px #00000075;
+    background-color: white;
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    margin-left: 400px;
+    margin-top: 45px;
+}
