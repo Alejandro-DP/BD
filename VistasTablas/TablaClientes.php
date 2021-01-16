@@ -46,8 +46,8 @@
     <!--              DataTables                           -->
               <div>
                           <form method="POST">
-                              <table id="tabla" class="table table-dark" style="width:100%">
-                                    <thead> 
+                              <table id="tabla">
+                                    <thead class="thead-dark"> 
                                       <tr>
                                               <?php
                                               require '../BD/conexion.php';
