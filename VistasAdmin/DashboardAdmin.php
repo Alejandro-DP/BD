@@ -9,6 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5,minimum-scale=0.86">
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/dash.css">
   <link rel="stylesheet" href="../css/sb-admin-2.min.css">
 	  <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
 </head>
@@ -39,11 +40,11 @@
       <button class="btn btn-danger" id="boton" onclick="location='../BD/cs.php'"> Cerrar Sesion   </buton>
     </div>
     </div>
-    <!--falta agregar el jtable-->
+    <!--              DataTables                           -->
     <div>
       <form method="POST" class="taba" >
-        <table id="tabla">
-          <thead>
+        <table id="tabla" >
+          <thead class="thead-dark">
               <th>Bases De Datos</th>
               <th>Seleccion</th>   
           </thead>
@@ -109,6 +110,20 @@
         </form>
         </div>
       </div>
+      <!--                Toggle de opciiones de la Base de Datos                           --->
+      <div class="opciones-toggle">
+      <?php
+      require '../BD/conexion.php';
+      $sentenciasql = "SHOW TABLLES";
+      $op = "show tables";
+      $consulta=mysqli_query($conexion,$sentenciasql);
+      while($op=mysqli_fetch_row($consulta)){
+        echo '<a class="t-opc" href="' . htmlspecialchars($op[0]) . '" />'.($op[0])."\n";
+
+
+      }
+      ?>
+      </div>
       <!-- Menu lateral-->
       <div class=" wrapper navbar-nav bg-white sidebar sidebar-dark accordion"> 
         <h5 class = "icon-dat">Bases De Datos</h5>
@@ -119,9 +134,7 @@
           $s="SHOW TABLES IN Air";
           $consulta=mysqli_query($conexion,$sentenciasql);
           while($otra=mysqli_fetch_row($consulta)){
-            $dom = new DOMDocument('1.0', 'utf-8');
                 echo '<li class="acord"  />' .($otra[0])."\n";  
-            echo $dom->saveXML();
             }
         ?>
         </div>
