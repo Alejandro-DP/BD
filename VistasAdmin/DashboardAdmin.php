@@ -40,58 +40,58 @@
     </div>
     </div>
     <!--falta agregar el jtable-->
-<div >
- <form method="POST" class="taba">
-   <table>
-    <thead>
-      <tr>
-        <th>Eliminar Bases De Datos</th>
-        <th>Seleccion</th>   
-      </tr>
-    </thead>
-      <tbody>
-       <?php
-        include '../BD/conexion.php';
-          $sentencia=mysqli_query($conexion,"SHOW DATABASES");
-            while($fr=mysqli_fetch_row($sentencia)){
-              echo "
-                <tr>
-                <td>$fr[0]</td>
-                <td><input type='checkbox' name='eliminar[]' value='$fr[0]'/></td>
-                </tr>
-              ";
-              }
-       ?>
-      </tbody>
-        <tfoot>
-           <tr>
-            <th><input type="submit" name="borrar" value="Eliminar Seleccion(es)" class="btn btn-danger"></th>
-           </tr>
-        </tfoot>
-         <?php
-          if(isset($_POST['borrar'])){
-          if(empty($_POST["eliminar"])){
-          echo "<script>
-          alert('no seleccionaste ningun campo');  
-          location.href='../VistasAdmin/DashboardAdmin.php';
-          </script>";
-            }
-              else{
-                foreach ($_POST["eliminar"] as $fr) {
-                  include '../BD/conexion.php';
-                    $sem="DROP DATABASE $fr";
-                    $quer=mysqli_query($conexion,$sem);
-                    echo "<script>
-                    alert('Base de datos borrada con exito');
-                    location.href='../VistasAdmin/DashboardAdmin.php';
-                    </script>";  
+    <div>
+      <form method="POST" class="taba">
+        <table>
+          <thead>
+            <tr>
+              <th>Eliminar Bases De Datos</th>
+              <th>Seleccion</th>   
+            </tr>
+          </thead>
+            <tbody>
+            <?php
+              include '../BD/conexion.php';
+                $sentencia=mysqli_query($conexion,"SHOW DATABASES");
+                  while($fr=mysqli_fetch_row($sentencia)){
+                    echo "
+                      <tr>
+                      <td>$fr[0]</td>
+                      <td><input type='checkbox' name='eliminar[]' value='$fr[0]'/></td>
+                      </tr>
+                    ";
                     }
+            ?>
+            </tbody>
+              <tfoot>
+                <tr>
+                  <th><input type="submit" name="borrar" value="Eliminar Seleccion(es)" class="btn btn-danger"></th>
+                </tr>
+              </tfoot>
+              <?php
+                if(isset($_POST['borrar'])){
+                if(empty($_POST["eliminar"])){
+                echo "<script>
+                alert('no seleccionaste ningun campo');  
+                location.href='../VistasAdmin/DashboardAdmin.php';
+                </script>";
                   }
-            }
-         ?>
-    </table>
-  </form>
-</div>
+                    else{
+                      foreach ($_POST["eliminar"] as $fr) {
+                        include '../BD/conexion.php';
+                          $sem="DROP DATABASE $fr";
+                          $quer=mysqli_query($conexion,$sem);
+                          echo "<script>
+                          alert('Base de datos borrada con exito');
+                          location.href='../VistasAdmin/DashboardAdmin.php';
+                          </script>";  
+                          }
+                        }
+                  }
+              ?>
+          </table>
+        </form>
+      </div>
 
         <div class="content-bdn">
         <h6 class="text-center">Crear Base De Datos</h6>
