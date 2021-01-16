@@ -2,6 +2,17 @@
 $nombr = $_POST['user'];
 $contr = $_POST['pass'];
 require_once '../BD/conexion.php';
+
+if (empty($nombr && $contr)){
+	echo "
+	<script>
+    alert('Debes de llenar los campos');
+   location.href='../index.php';
+	</script>;
+	
+	";
+}
+else{   
 $consulta="SELECT *FROM usuarios WHERE nombre='$nombr' AND  contrasena='$contr'";
 $query = mysqli_query($conexion,$consulta);
 
@@ -16,9 +27,10 @@ location.href='../VistasAdmin/DashboardAdmin.php';
 }
 else
 if ($fias['id_cargoo']==2) {
-	echo "Programador";
+	session_start();
+	$_SESSION['login']=$nombr;
 	echo"<script>
-      alert('faltan modificaciones);
+      location.href='../VistasProg/dash.php';
 	</script>";
 }
 
@@ -28,5 +40,6 @@ else{
 		  alert('No tienes acceso al sistema');
 		  location.href='../index.php';
 	</script>";
+}
 }
 ?>

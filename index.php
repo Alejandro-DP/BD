@@ -40,7 +40,7 @@ if (isset($_SESSION['login'])){
 	   <input class="form-control" type="password" name="pass" placeholder="Contraseña">
 
 	   </div> 
-	   <div class="input-group">
+	   <div class="input-group no" >
 	   		<input class="btn btn-lg btn-primary btn-block" id="btn" type="submit" name="enviar" value="Accesar">
         </div>
 	</form>

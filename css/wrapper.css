@@ -1,16 +1,16 @@
 body{
-  
- background: #cecaca;
+  background: #cecaca;
 }
+
 .user-var{
-  display: flex;
+  
   background: #0ED1AA;
-  width: 1366px;
-  height: 50px;
+  
+ /* height: 50px;
   opacity: 80%;
   -webkit-box-shadow: 0px 5px 5px 0px  rgba(0, 0, 0, 0.774); 
   box-shadow: 0px 5px 15px 0px #56aeb49d;
-  
+  */
 }
 .user{
   display: flex;
@@ -47,33 +47,42 @@ body{
   display: flex;
   background: white;
   width: 200px;
-  height: 605px;
+  height: 900px;
 }
 .button-flo{
   
-  margin-left: 1270px;
-  margin-top: 530px;
-  width: 50px;
-  height: 50px;
-  background: #0ED1AA;
-  border-radius: 50%;
+  width: 3.75rem;
+  height: 3.75rem;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  text-align: center;
+  background: #cecaca;
+  line-height: 46px;
+  
 
 }
 .opc{
   opacity: 80%;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   font-size: xx-large;
   text-align:center;
   color: #ffffff;
+  object-fit: cover;
 }
 #opciones{
-  margin-left: 1050px;
-  margin-top: 375px;
-  position: absolute;
-  height: 150px;
-  width: 230px;
+  
+  
+  height: 170px;
+  width: 240px;
+  position: fixed;
+  right: 3rem;
+  bottom: 5rem;
+  text-align: center;
+  background: #cecaca;
+  line-height: 48px;
   background: #ffffff;
   display: none;
 }
@@ -103,11 +112,11 @@ a:hover{
 #user-content{
   border-radius: 6px;
   margin-top: 50px;
-  background: white;
+  background:#ffffff;
   margin-left: 300px;
   position: absolute;
-  width: 250px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
 }
 .cont-img-user{
   border-radius: 50%;
@@ -116,4 +125,136 @@ a:hover{
   margin-left: 50px;
   margin-top: 20px;
 }
+.icon-dat{
+  position: absolute;
+  margin-left: 20px;
+  width: 140px;
+  margin-top: 50px;
+}
+.data-bases{
+  position: absolute;
+  margin-left: 20px;
+  width: 400px;
+  margin-top: 90px;
+  
+}
+.show-t{
+  padding: 10px;
+  position: absolute;
+  margin-left: 400px;
+  margin-top: 70px;
+  width: 60%px;
+  height: 500px;
+  background: #ffffff;
+  -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
+  box-shadow: 1px 0px 15px 5px #00000075;
+}
+.content-registro{
+  -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
+  box-shadow: 1px 0px 15px 5px #00000075;
+  margin-top: 50px;
+  margin-left: 450px;
+  background: #ffffff;
+  position:absolute;
+  width: 600px;
+  height: 400px;
+  padding: 15px;
+}
+.usuariose{
+  -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
+  box-shadow: 1px 0px 15px 5px #00000075;
+  margin-top: 20px;
+  margin-left: 50px;
+  background: #ffffff;
+  position:relative;
+  width: 300px;
+  height: 250px;
+  padding: 15px;
+  display:inline-block;
+}
+.taba{
+  -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
+  box-shadow: 1px 0px 15px 5px #00000075;
+  margin-top: 100px;
+  margin-left: -1000px;
+  background: #ffffff;
+  position:absolute;
+  width: 600px;
+  height: 400px;
+  padding: 15px;
+  border-radius: 7px;
+  
+}
 
+
+.content-bdn{
+  -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
+  box-shadow: 1px 0px 15px 5px #00000075;
+  margin-top: 500px;
+  margin-left: 1000px;
+  background: #ffffff;
+  position:absolute;
+  width: 300px;
+  height: 300px;
+  padding: 15px;
+  border-radius: 7px;
+}
+.content-session{
+
+ display: none;
+}
+#boton{
+
+  margin:5px;
+}
+.tabla-bd{
+  
+  -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
+  box-shadow: 1px 0px 15px 5px #00000075;
+  margin-top: 90px;
+  margin-left: 300px;
+  background: #ffffff;
+  position:absolute;
+  width: 700px;
+  height: 450px;
+  padding: 15px;
+}
+
+.tabla-bd2{
+  -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
+  box-shadow: 1px 0px 15px 5px #00000075;
+  margin-top: 90px;
+  margin-left: 250px;
+  background: #ffffff;
+  position:absolute;
+  width: 700px;
+  height: 450px;
+  padding: 15px;
+}
+.importarbd-bd{
+  -webkit-box-shadow: 1px 0px 15px 5px #00000075; 
+  box-shadow: 1px 0px 15px 5px #00000075;
+  margin-top: 90px;
+  margin-left: 400px;
+  background: #ffffff;
+  position:absolute;
+  width: 400px;
+  height: 300px;
+  padding: 15px;
+}
+
+.inn>div{
+  margin: 20px;
+}
+
+
+.content-bdn{
+  color: black;
+}
+
+.data-bases>.acord{
+  height: 40px;
+  width: 150px;
+  margin-bottom: 20px;
+  border-bottom: #0ed1aa8a solid 0.5px;
+}
