@@ -114,13 +114,10 @@
       <div class="opciones-toggle" onclick = "opc()">
       <?php
       require '../BD/conexion.php';
-      $sentenciasql = "SHOW TABLES IN Air";
-      $consulta=mysqli_query($conexion,$sentenciasql);
+      $consulta=mysqli_query($conexion,"SHOW TABLES IN Air");
       while($op=mysqli_fetch_row($consulta)){
-        
-        echo '<a class="t-opc" href="' . htmlspecialchars($op[0]) . '" />'.($op[0])."\n";
-
-       
+      
+       echo '<li class="t-opc" href="' . htmlspecialchars($op[0]) . '" />'.($op[0])."\n";
       }
       ?>
       </div>
@@ -131,7 +128,6 @@
         <?php
           require '../BD/conexion.php';
           $sentenciasql="SHOW DATABASES";
-          $s="SHOW TABLES IN Air";
           $consulta=mysqli_query($conexion,$sentenciasql);
           while($otra=mysqli_fetch_row($consulta)){
                 echo '<li class="acord" id ="'.htmlspecialchars($otra[0]).'" />' .($otra[0])."\n";  
