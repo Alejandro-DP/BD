@@ -45,7 +45,7 @@
     <!--              DataTables                           -->
               <div>
                           <form method="POST">
-                              <table id="tabla2" class="table table-dark">
+                              <table id="example" class="table table-striped table-bordered" style="width:100%">
                                     <thead> 
                                       <tr>
                                               <?php
@@ -59,8 +59,8 @@
                                               "  ;
                                                 }
                                               ?>
-                                              <th> Seleccion Eliminar </th>
-                                              <th> Seleccion Modificar <th>
+                                              <th>  Seleccion Eliminar     </th>
+                                              <th>  Seleccion Modificar </th>
                                         </tr>
                                     </thead>
                                           <tbody>
@@ -197,12 +197,14 @@
       </div>
   </div>
 
+<script type="text/javascript" >$(document).ready(function() {
+    $('#example').DataTable();
+} );</script>
   <script src="../js/app.js"></script>
   <script src="../Dash/jquery/jquery.min.js"></script>
   <script src="../Dash/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../DT/DataTables-1.10.23/js/jquery.dataTables.min.js"></script>
   <script src="../DT/DataTables-1.10.23/js/dataTables.bootstrap4.min.js"></script>
-  <script src="../js/dt.js"></script>
 </body>
 
 </html>
