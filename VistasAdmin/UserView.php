@@ -46,7 +46,7 @@
             <div  >
               <?php
                 include '../BD/conexion.php';
-                $qw="SELECT *FROM usuarios";
+                $qw="SELECT usuarios.id,usuarios.nombre as Nombre,usuarios.apellidop as Apellido,cargo.descripcion as puesto from usuarios INNER JOIN cargo on cargo.id_cargo=usuarios.id_cargoo";
                 $qy=mysqli_query($conexion,$qw);
                 while($ftr=mysqli_fetch_array($qy)){
                   //hay que modificar la propiedad de css usuariose lo intente pero el resultado es el que ves
@@ -56,10 +56,7 @@
                     <tr>
                       <th> <img src='../Recursos/user-img.png' heigth='80' width='80'> </th>
                     </tr>
-                    <tr>
-                      <th scope='col'>Nombre:</th>
-                    <th scope='col'>$ftr[nombre]</th>
-                    </tr>
+                    
                   </thead>
                     <tbody>
                       <tr>
@@ -68,15 +65,15 @@
                       </tr>
                       <tr>
                         <td>Apellido Paterno :</td>
-                          <td>$ftr[apellidop]</td>
+                          <td>$ftr[Nombre]</td>
                       </tr>
                       <tr>
                         <td>Apellido Materno :</td>
-                          <td>$ftr[apellidom]</td>
+                          <td>$ftr[Apellido]</td>
                       </tr>
                       <tr>
                         <td>Tipo De Usuario :</td>
-                          <td>$ftr[id_cargoo]</td>
+                          <td>$ftr[puesto]</td>
                       </tr>
                     </tbody>
                   </table>
