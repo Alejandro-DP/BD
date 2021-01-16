@@ -41,13 +41,11 @@
     </div>
     <!--falta agregar el jtable-->
     <div>
-      <form method="POST" class="taba">
-        <table>
+      <form method="POST" class="taba" >
+        <table id="tabla">
           <thead>
-            <tr>
-              <th>Eliminar Bases De Datos</th>
+              <th>Bases De Datos</th>
               <th>Seleccion</th>   
-            </tr>
           </thead>
             <tbody>
             <?php
@@ -144,5 +142,8 @@
   <script src="../js/app.js"></script>
   <script src="../Dash/jquery/jquery.min.js"></script>
   <script src="../Dash/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../DT/DataTables-1.10.23/js/jquery.dataTables.min.js"></script>
+  <script src="../DT/DataTables-1.10.23/js/dataTables.bootstrap4.min.js"></script>
+  <script src="../js/dt.js"></script>
 </body>
 </html>
