@@ -1,0 +1,13 @@
+.opciones-toggle{
+    width: 100px;
+    height: 200px;
+    background: #fff;
+    position: absolute;
+    margin-top: 6.2rem;
+    margin-left: 11rem;
+}
+.t-opc:link, .t-opc:visited, .t-opc:active{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
