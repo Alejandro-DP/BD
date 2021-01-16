@@ -25,7 +25,7 @@ $consulta=mysqli_query($conexion,$sentenciasql);
 <div >
 <?php
       require './BD/conexion.php';
-      $sentenciasql = "SHOW TABLES IN AiR";
+      $sentenciasql = "SHOW TABLES IN Air";
       $consulta=mysqli_query($conexion,$sentenciasql);
       while($op=mysqli_fetch_row($consulta)){
       

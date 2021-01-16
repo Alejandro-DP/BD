@@ -117,7 +117,7 @@
       $consulta=mysqli_query($conexion,"SHOW TABLES IN Air");
       while($op=mysqli_fetch_row($consulta)){
       
-       echo '<li class="t-opc" href="' . htmlspecialchars($op[0]) . '" />'.($op[0])."\n";
+       echo '<a class="t-opc" href="../VistasTablas/' . htmlspecialchars($op[0]) . '.php" />'.($op[0])."\n";
       }
       ?>
       </div>
