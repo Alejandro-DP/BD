@@ -43,7 +43,7 @@
   </div>
   <!--code-->
  <!--  <table class='usuariose'>-->
-            <div class="usuariose" >
+            <div  >
               <?php
                 include '../BD/conexion.php';
                 $qw="SELECT *FROM usuarios";
@@ -51,7 +51,7 @@
                 while($ftr=mysqli_fetch_array($qy)){
                   //hay que modificar la propiedad de css usuariose lo intente pero el resultado es el que ves
                 echo"
-                <table>
+                <table class='usuariose'>
                   <thead>
                     <tr>
                       <th> <img src='../Recursos/user-img.png' heigth='80' width='80'> </th>
@@ -85,25 +85,7 @@
               ?>
             </div>
                   <!-- Menu lateral-->
-      <div class=" wrapper navbar-nav bg-white sidebar sidebar-dark accordion"> 
-        <h5 class = "icon-dat">Bases De Datos</h5>
-        <div class="data-bases">
-        <?php
-          require '../BD/conexion.php';
-          $sentenciasql="SHOW DATABASES";
-          $s="SHOW TABLES IN Air";
-          $consulta=mysqli_query($conexion,$sentenciasql);
-          while($otra=mysqli_fetch_row($consulta)){
-            $dom = new DOMDocument('1.0', 'utf-8');
-            
-                echo '<li class="acord"  />' .($otra[0])."\n";
-            
-            echo $dom->saveXML();
-            }
-        ?>
       
-        </div>
-      </div>
         
 
 
@@ -115,6 +97,7 @@
       </div>
 
       <div class="col-md-4 col-md-offset-1" id="opciones">
+      <li><a href="FormularioRegistro.php">Crear Usuario</a></li>
         <li><a href="Importar.php">Importar</a></li>
         <li ><a href="#">Exportar</a></li>
         <li><a href="UserView.php">Cuentas de Usuario</a></li>
