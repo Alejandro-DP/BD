@@ -49,7 +49,14 @@
                               <form>
                                 <?php
                                   include '../BD/conexion.php';
-
+                                  $q=mysqli_query($conexion,"SHOW DATABASES");
+                                  while($fr=mysqli_fetch_row($q)){ 
+                                  echo "
+                                  <select> name='Bases Datos'>
+                                    <option value=$fr[0]>opcion</option>
+                                  </select>  
+                                  ";
+                                }
                                 ?>
                                 
                               </form>
