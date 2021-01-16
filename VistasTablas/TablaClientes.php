@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../css/dash.css">
   <link rel="stylesheet" href="../css/sb-admin-2.min.css">
 	  <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     
 </head>
 <body id="page-top ">
@@ -45,7 +46,7 @@
     <!--              DataTables                           -->
               <div>
                           <form method="POST">
-                              <table id="example" class="table table-striped table-bordered" style="width:100%">
+                              <table id="tabla" class="table table-dark" style="width:100%">
                                     <thead> 
                                       <tr>
                                               <?php
@@ -197,14 +198,14 @@
       </div>
   </div>
 
-<script type="text/javascript" >$(document).ready(function() {
-    $('#example').DataTable();
-} );</script>
+
   <script src="../js/app.js"></script>
   <script src="../Dash/jquery/jquery.min.js"></script>
   <script src="../Dash/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../DT/DataTables-1.10.23/js/jquery.dataTables.min.js"></script>
   <script src="../DT/DataTables-1.10.23/js/dataTables.bootstrap4.min.js"></script>
+  <script src="../js/dt.js"></script>
+
 </body>
 
 </html>
