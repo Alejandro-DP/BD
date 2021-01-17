@@ -11,7 +11,8 @@
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/dash.css">
   <link rel="stylesheet" href="../css/sb-admin-2.min.css">
-	  <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
+    <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
+    
 </head>
 <body id="page-top ">
   <div class=" navbar navbar-expand  bg-success topbar  static-top shadow">

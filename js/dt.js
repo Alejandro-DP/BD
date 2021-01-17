@@ -33,10 +33,3 @@ $(document).ready(function () {
     });
 
 });
-
-
-
-
-
-
-
