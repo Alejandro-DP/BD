@@ -46,19 +46,20 @@
     <!--              DataTables                           -->
 
                             <div class="vista">
-                              <form>
+                              <form method="POST" action="../BD/Expo.php">
+                              <label>Selecciona BD a Exportar:</label>
+                              <select name="bd">
                                 <?php
                                   include '../BD/conexion.php';
                                   $q=mysqli_query($conexion,"SHOW DATABASES");
                                   while($fr=mysqli_fetch_row($q)){ 
                                   echo "
-                                  <select> name='Bases Datos'>
-                                    <option value=$fr[0]>opcion</option>
-                                  </select>  
+                                        <option value='$fr[0]'>$fr[0]</option>
                                   ";
                                 }
                                 ?>
-                                
+                                 </select>
+                                 <input type="submit" name="enviar" value="¡Exportar!" class="btn btn-success">
                               </form>
                             </div>
       <!-- Menu lateral-->
