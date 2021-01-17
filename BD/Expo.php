@@ -518,7 +518,10 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 ";
-fwrite($salida_sql,$content);
+$fp=fopen($salida_sql,"w");
+fputs($fp,$content);
+fclose($fp);
+//fwrite($salida_sql,$content);
 	system($dump, $output); //Ejecutamos el comando para respaldo
 	header ("Location: $salida_sql"); // Redireccionamos para descargar el Arcivo ZIP
 
