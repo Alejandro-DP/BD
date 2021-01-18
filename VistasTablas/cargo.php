@@ -131,11 +131,18 @@
                                                             
                                                             foreach ($_POST["modificar"] as $i) {
                                                               include '../BD/conexion.php';
-                                                              echo $i;
-                                                              $nom="<script>document.write(nn)</script>";
-                                                              $ed="<script>document.write(ne)</script>";
-                                                              $tel="<script>document.write(nt)</script>";
-                                                              $corr="<script>document.write(nc)</script>";
+                                                             echo "
+                                                             <div class='miform'>
+                                                             <form >
+
+                                                             
+
+
+                                                             </form>
+                                                             </div>
+                                                             ";
+                                                             
+                                                          
 
                                                             }
                                                           }
