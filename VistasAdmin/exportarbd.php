@@ -66,20 +66,7 @@
                               </form>
                             </div>
       <!-- Menu lateral-->
-      <div class=" wrapper navbar-nav bg-white sidebar sidebar-dark accordion"> 
-        <h5 class = "icon-dat">Bases De Datos</h5>
-        <div class="data-bases">
-        <?php
-          require '../BD/conexion.php';
-          $sentenciasql="SHOW DATABASES";
-          $s="SHOW TABLES IN Air";
-          $consulta=mysqli_query($conexion,$sentenciasql);
-          while($otra=mysqli_fetch_row($consulta)){
-                echo '<li class="acord"  />' .($otra[0])."\n";  
-            }
-        ?>
-        </div>
-      </div>
+      
     <!-- boton flotante -->
       <div class="button-flo " onclick="togle()">
         <img class="opc"src="../Recursos/more.png" >
