@@ -44,7 +44,7 @@
     </div>
     </div>
     <!--              DataTables                           -->
-              <div >
+              <div class="t-cli" >
                           <form method="POST"> 
                               <table id="tabla">
                                     <thead> 
