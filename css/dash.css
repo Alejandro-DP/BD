@@ -1,16 +1,15 @@
 .opciones-toggle{
-    width: 100px;
-    height: 200px;
+    width: 120px;
+    height: 210px;
     background: #fff;
+    position: absolute;
     margin-left: 190px;
     margin-top: 80px;
     display: none;
 }
- .t-opc:link {
+.opciones-toggle>a{
     display: block;
-    text-decoration: none;
-    height: 23px;
-    width: 50px;
+
 }
 
 .t-cli{
