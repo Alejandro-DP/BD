@@ -51,7 +51,7 @@
                                       <tr>
                                               <?php
                                               require '../BD/conexion.php';
-                                              $cons="SHOW COLUMNS FROM cliente FROM Air";
+                                              $cons="SHOW COLUMNS FROM cargo FROM Air";
                                               $query=mysqli_query($conexion,$cons);
                                               while($fields=mysqli_fetch_row($query)){
                                               echo "
@@ -67,31 +67,22 @@
                                           <tbody>
                                                 <?php
                                                 require '../BD/conexion.php';
-                                                $c="SELECT *FROM cliente";
+                                                $c="SELECT *FROM cargo";
                                                 $q=mysqli_query($conexion,$c);
                                                 while($i=mysqli_fetch_array($q)){
                                                   echo "
                                                   <tr>
                                                   <td>
-                                                  $i[Id_cliente]
+                                                  $i[id_cargo]
                                                   </td>
                                                   <td>
-                                                  $i[Nom_clien]
+                                                  $i[descripcion]
                                                   </td>
                                                   <td>
-                                                  $i[Edad]
+                                                  <input type='checkbox' name='eliminar[]' value='$i[id_cargo]'/>  
                                                   </td>
                                                   <td>
-                                                  $i[tel_cliente]
-                                                  </td>
-                                                  <td>
-                                                  $i[email]
-                                                  </td>
-                                                  <td>
-                                                  <input type='checkbox' name='eliminar[]' value='$i[Id_cliente]'/>  
-                                                  </td>
-                                                  <td>
-                                                  <input type='checkbox' name='modificar[]' value='$i[Id_cliente]'/>
+                                                  <input type='checkbox' name='modificar[]' value='$i[id_cargo]'/>
                                                   </td>
                                                   </tr>
                                                   ";
@@ -117,7 +108,7 @@
                                                             
                                                             foreach ($_POST["eliminar"] as $i) {
                                                               include '../BD/conexion.php';
-                                                              $sem="DELETE FROM cliente WHERE Id_cliente=$i";
+                                                              $sem="DELETE FROM cargo WHERE id_cargo=$i";
                                                               $quer=mysqli_query($conexion,$sem);
                                                               echo "<script>
                                                               alert('Elemento Eliminado Con Exito');
@@ -140,12 +131,7 @@
                                                             
                                                             foreach ($_POST["modificar"] as $i) {
                                                               include '../BD/conexion.php';
-                                                              echo "<script>
-                                                              var nn=prompt('Nuevo Nombre');
-                                                              var ne=prompt('Nueva Edad');
-                                                              var nt=prompt('Nuevo Telefono');
-                                                              var nc=prompt('Nuevo Correo');
-                                                              </script>";
+                                                              echo $i;
                                                               $nom="<script>document.write(nn)</script>";
                                                               $ed="<script>document.write(ne)</script>";
                                                               $tel="<script>document.write(nt)</script>";
