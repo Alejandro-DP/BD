@@ -48,6 +48,7 @@
                             <div class="vista">
                               <form method="POST" action="../BD/Expo.php">
                               <label>Selecciona BD a Exportar:</label>
+                              <br>
                               <select name="bd">
                                 <?php
                                   include '../BD/conexion.php';
@@ -59,6 +60,8 @@
                                 }
                                 ?>
                                  </select>
+                                 <br>
+                                 <img src="../Recursos/page_background.png"/>
                                  <input type="submit" name="enviar" value="¡Exportar!" class="btn btn-success">
                               </form>
                             </div>
