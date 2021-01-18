@@ -6,7 +6,7 @@
     margin-top: 80px;
     display: none;
 }
- .t-opc {
+ .t-opc:link  {
     display: block;
     text-decoration: none;
     color: black;

@@ -31,7 +31,7 @@ $consulta=mysqli_query($conexion,$sentenciasql);
           $sentenciasql="SHOW DATABASES";
           $consulta=mysqli_query($conexion,$sentenciasql);
           while($otra=mysqli_fetch_row($consulta)){
-            echo '<li class="acord" onclick="'.htmlspecialchars($op[0]).'" id ="'.htmlspecialchars($otra[0]).'" />' .($otra[0])."\n";  
+            echo '<li class="acord" onclick="'.htmlspecialchars($otra[0]).'" id ="'.htmlspecialchars($otra[0]).'" />' .($otra[0])."\n";  
           }
         ?>
         </div>
