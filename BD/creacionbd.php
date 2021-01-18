@@ -5,7 +5,7 @@ if(empty($var)){
     echo "
     <script>
     alert('Escribe un nombre para la bd');
-    location.href='../VistasAdmin/crearbd.php';
+    location.href='../VistasAdmin/DashboardAdmin.php';
     </script>;
     ";
 }

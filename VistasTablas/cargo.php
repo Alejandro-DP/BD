@@ -170,7 +170,7 @@
                   <form method='POST' action='../BD/pdcargo.php'>
                   <h6 class="text-center">Modificar Datos</h6>
 
-                  <label>Selecciona id usuario:</label>
+                  <label>Selecciona id de Cargo:</label>
                   <select name="id">
                       <?php
                      require '../BD/conexion.php';
@@ -186,7 +186,7 @@
                           <input type='text' class='form-control' name='nom' aria-describedby='emailHelp' placeholder='Ingresa Cargo'>
                           </div>
                                                               
-                <button type='submit' class='btn btn-warning'>Submit</button>
+                <button type='submit' class='btn btn-warning'>Modificar</button>
                   </form>
           </div>
 
@@ -203,7 +203,6 @@
 
       <div class="col-md-4 col-md-offset-1" id="opciones">
       <li><a href="../VistasAdmin/FormularioRegistro.php">Crear Usuario</a></li>
-        <li><a href="../VistasAdmin/Importar.php">Importar</a></li>
         <li ><a href="../VistasAdmin/exportarbd.php">Exportar</a></li>
         <li><a href="../VistasAdmin/UserView.php">Cuentas de Usuario</a></li>
       </div>

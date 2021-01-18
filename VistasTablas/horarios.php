@@ -171,7 +171,6 @@
 
       <div class="col-md-4 col-md-offset-1" id="opciones">
       <li><a href="../VistasAdmin/FormularioRegistro.php">Crear Usuario</a></li>
-      <li><a href="../VistasAdmin/Importar.php">Importar</a></li>
         <li ><a href="../VistasAdmin/exportarbd.php">Exportar</a></li>
         <li><a href="../VistasAdmin/UserView.php">Cuentas de Usuario</a></li>
       </div>
