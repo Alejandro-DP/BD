@@ -75,11 +75,11 @@ body{
 #opciones{
   
   
-  height: 170px;
+  height: 240px;
   width: 240px;
   position: fixed;
-  right: 3rem;
-  bottom: 5rem;
+  right: 5rem;
+  bottom: 4rem;
   text-align: center;
   background: #cecaca;
   line-height: 48px;
