@@ -140,16 +140,16 @@
                                                             
                                                             foreach ($_POST["modificar"] as $i) {
                                                               include '../BD/conexion.php';
-                                                              echo "<script>
-                                                              var nn=prompt('Nuevo Nombre');
-                                                              var ne=prompt('Nueva Edad');
-                                                              var nt=prompt('Nuevo Telefono');
-                                                              var nc=prompt('Nuevo Correo');
-                                                              </script>";
-                                                              $nom="<script>document.write(nn)</script>";
-                                                              $ed="<script>document.write(ne)</script>";
-                                                              $tel="<script>document.write(nt)</script>";
-                                                              $corr="<script>document.write(nc)</script>";
+                                                              echo "
+                                                             <div class='miform'>
+                                                             <form>
+
+                                                             
+
+
+                                                             </form>
+                                                             </div>
+                                                             ";
 
                                                             }
                                                           }

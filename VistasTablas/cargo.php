@@ -133,7 +133,7 @@
                                                               include '../BD/conexion.php';
                                                              echo "
                                                              <div class='miform'>
-                                                             <form >
+                                                             <form>
 
                                                              
 
