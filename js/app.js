@@ -18,7 +18,7 @@ function togle() {
     }
   }
   
-  function air(){
+  function Air(){
     var y=document.getElementById("op");
     if(y.style.display==="none"){
       y.style.display="block";
