@@ -6,16 +6,13 @@
     margin-top: 80px;
     display: none;
 }
- .t-opc:link .t-opc:active  {
+ .t-opc:link {
     display: block;
     text-decoration: none;
-    color: black;
     height: 23px;
     width: 50px;
 }
-.t-opc :hover{
-    background: #cecece;
-}
+
 .t-cli{
     height: 500px;
     width: 800px;
