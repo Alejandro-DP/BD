@@ -19,7 +19,7 @@ function togle() {
   }
   
   function opc(){
-    var y=document.getElementById("air");
+    var y=document.getElementById("Air");
     if(y.style.display==="none"){
       y.style.display="block";
 

@@ -51,7 +51,7 @@
                                       <tr>
                                               <?php
                                               require '../BD/conexion.php';
-                                              $cons="SHOW COLUMNS FROM horarios FROM Air";
+                                              $cons="SHOW COLUMNS FROM vuelo FROM Air";
                                               $query=mysqli_query($conexion,$cons);
                                               while($fields=mysqli_fetch_row($query)){
                                               echo "
@@ -67,31 +67,28 @@
                                           <tbody>
                                                 <?php
                                                 require '../BD/conexion.php';
-                                                $c="SELECT *FROM horarios";
+                                                $c="SELECT *FROM vuelo";
                                                 $q=mysqli_query($conexion,$c);
                                                 while($i=mysqli_fetch_array($q)){
                                                   echo "
                                                   <tr>
                                                   <td>
+                                                  $i[id_vuelo]
+                                                  </td>
+                                                  <td>
+                                                  $i[Disponib]
+                                                  </td>
+                                                  <td>
+                                                  $i[id_compañia]
+                                                  </td>
+                                                  <td>
                                                   $i[id_horario]
                                                   </td>
                                                   <td>
-                                                  $i[hora]
+                                                  <input type='checkbox' name='eliminar[]' value='$i[id_vuelo]'/>  
                                                   </td>
                                                   <td>
-                                                  $i[fecha]
-                                                  </td>
-                                                  <td>
-                                                  $i[id_origen]
-                                                  </td>
-                                                  <td>
-                                                  $i[id_destino]
-                                                  </td>
-                                                  <td>
-                                                  <input type='checkbox' name='eliminar[]' value='$i[id_horario]'/>  
-                                                  </td>
-                                                  <td>
-                                                  <input type='checkbox' name='modificar[]' value='$i[id_horario]'/>
+                                                  <input type='checkbox' name='modificar[]' value='$i[id_vuelo]'/>
                                                   </td>
                                                   </tr>
                                                   ";

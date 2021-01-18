@@ -11,7 +11,8 @@
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/dash.css">
   <link rel="stylesheet" href="../css/sb-admin-2.min.css">
-	  <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
+    <link rel="stylesheet" type="text/css" href="../css/wrapper.css">
+    
 </head>
 <body id="page-top ">
   <div class=" navbar navbar-expand  bg-success topbar  static-top shadow">
@@ -112,9 +113,20 @@
       </div>
       <!--                Toggle de opciiones de la Base de Datos                           --->
       <div class="opciones-toggle" onclick = "opc()">
+<<<<<<< HEAD
     <div class="dd"> 
       
     </div>
+=======
+      <?php
+      require '../BD/conexion.php';
+      $consulta=mysqli_query($conexion,"SHOW TABLES IN Air");
+      while($op=mysqli_fetch_row($consulta)){
+      
+       echo '<a class="t-opc" href="../VistasTablas/' . htmlspecialchars($op[0]) . '.php" />'.($op[0])."\n";
+      }
+      ?>
+>>>>>>> 09dd672f9d90b1a6fdfffc814ec0cc2c8ba1a960
       </div>
       <!-- Menu lateral-->
       <div class=" wrapper navbar-nav bg-white sidebar "> 
@@ -123,7 +135,6 @@
         <?php
           require '../BD/conexion.php';
           $sentenciasql="SHOW DATABASES";
-          $s="SHOW TABLES IN Air";
           $consulta=mysqli_query($conexion,$sentenciasql);
           while($otra=mysqli_fetch_row($consulta)){
                 echo '<li class="acord" id ="'.htmlspecialchars($otra[0]).'" />' .($otra[0])."\n";  
