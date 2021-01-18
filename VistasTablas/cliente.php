@@ -143,7 +143,7 @@
                                                               
                                                               echo "
                                                              <div class='miform'>
-                                                             <form>
+                                                             <form method='POST' action='cliente.php'>
                                                              <div class='form-group'>
                                                                <label for='nombre'>Nombre</label>
                                                                <input type='text' class='form-control' name='nom' aria-describedby='emailHelp' placeholder='Ingresa Nombre'>
@@ -164,17 +164,32 @@
                                                              <button type='submit' class='btn btn-warning'>Submit</button>
                                                            </form>
                                                              </div>
+                                                             
                                                              ";
-
+                                                             $id=$i;
+                                                             $nnom=$_POST['nom'];
+                                                             $ned=$_POST['edad'];
+                                                             $ntel=$_POST['tel'];
+                                                             $ncorr=$_POST['correo'];
+                                                             
                                                             }
                                                           }
                                                         }
+                                                                  
                                                         ?>
                                         
                               </table>
                           </form> 
                           
       </div>
+
+      <?php
+   $id=$i;
+   $nnom=$_POST['nom'];
+   $ned=$_POST['edad'];
+   $ntel=$_POST['tel'];
+   $ncorr=$_POST['correo'];
+      ?>
       
       <!--                Toggle de opciiones de la Base de Datos                           --->
       
