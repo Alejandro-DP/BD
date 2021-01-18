@@ -164,7 +164,6 @@
 
 
       
-    <!-- boton flotante -->
       <div class="button-flo " onclick="togle()">
         <img class="opc"src="../Recursos/more.png" >
       </div>

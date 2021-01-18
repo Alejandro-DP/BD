@@ -18,6 +18,16 @@ function togle() {
     }
   }
   
+  function air(){
+    var y=document.getElementById("op");
+    if(y.style.display==="none"){
+      y.style.display="block";
+
+    }
+    else{
+      y.style.display="none";
+    }
+  }
   function Air(){
     var y=document.getElementById("op");
     if(y.style.display==="none"){

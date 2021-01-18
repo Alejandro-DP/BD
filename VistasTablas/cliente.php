@@ -44,8 +44,8 @@
     </div>
     </div>
     <!--              DataTables                           -->
-              <div >
-                          <form method="POST"> 
+      <div class="t-cli">
+      <form method="POST"> 
                               <table id="tabla">
                                     <thead> 
                                       <tr>
@@ -158,7 +158,8 @@
                                         
                               </table>
                           </form> 
-                </div>
+                          
+      </div>
       
       <!--                Toggle de opciiones de la Base de Datos                           --->
       
