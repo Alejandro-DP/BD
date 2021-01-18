@@ -18,7 +18,7 @@
 <body id="page-top ">
   <div class=" navbar navbar-expand  bg-success topbar  static-top shadow">
     <div class="logodb">
-      <img src="../Recursos/thelogo.png">
+    <a class="logodb" href="../VistasAdmin/DashboardAdmin.php"><img src="../Recursos/thelogo.png"></a>
       
     </div>
 
@@ -33,7 +33,7 @@
     ?>
       </p>
       <div class="img" onclick="togle2()">
-      <a class="logodb" href="../VistasAdmin/DashboardAdmin.php"><img src="../Recursos/thelogo.png"></a>
+      <img src="../Recursos/perfildeusuario.jpg" class="user-logo">
       </div>
     </div>
     
@@ -44,8 +44,8 @@
     </div>
     </div>
     <!--              DataTables                           -->
-              <div class="t-cli">
-                          <form method="POST"> 
+      <div class="t-cli ">
+      <form method="POST"> 
                               <table id="tabla">
                                     <thead> 
                                       <tr>
@@ -60,8 +60,7 @@
                                               "  ;
                                                 }
                                               ?>
-                                              <th>  Seleccion Eliminar     </th>
-                                              <th>  Seleccion Modificar </th>
+                                              <th>   Seleccion    </th>
                                         </tr>
                                     </thead>
                                           <tbody>
@@ -81,9 +80,6 @@
                                                   <td>
                                                   <input type='checkbox' name='eliminar[]' value='$i[id_cargo]'/>  
                                                   </td>
-                                                  <td>
-                                                  <input type='checkbox' name='modificar[]' value='$i[id_cargo]'/>
-                                                  </td>
                                                   </tr>
                                                   ";
                                                       }
@@ -91,8 +87,8 @@
                                         </tbody> 
                                           <tfoot>
                                                         <tr>
-                                                        <th><input type="submit" name="Agregar" value="Agregar" onclick="window.open('../VistasTablas/Nc.php')" class="btn btn-primary"/></th>
-                                                        <th><input type="submit" name="modi" value="Modificar"  class="btn btn-warning"/></th>
+                                                        <th><input type="submit" name="Agregar" value="Agregar" onclick="window.open('#')" class="btn btn-primary"/></th>
+                                                        <!--<th><input type="submit" name="modi" value="Modificar"  class="btn btn-warning"/></th>-->
                                                         <th><input type="submit" name="borrar" value="Eliminar"  class="btn btn-danger"/></th>
                                                         </tr>
                                           </tfoot>
@@ -112,7 +108,7 @@
                                                               $quer=mysqli_query($conexion,$sem);
                                                               echo "<script>
                                                               alert('Elemento Eliminado Con Exito');
-                                                              location.href='../VistasTablas/TablaClientes.php';
+                                                              location.href='../VistasTablas/cargo.php';
                                                               </script>";  
                                                             }
                                                           }
@@ -130,28 +126,71 @@
                                                           else{
                                                             
                                                             foreach ($_POST["modificar"] as $i) {
-                                                              include '../BD/conexion.php';
-                                                             echo "
+                                                             // include '../BD/pdcliente.php';
+                                                              /*include '../BD/conexion.php';
+                                                              
+                                                              echo "
                                                              <div class='miform'>
-                                                             <form>
-
-                                                             
-
-
-                                                             </form>
+                                                             <form method='POST' action='cliente.php'>
+                                                             <div class='form-group'>
+                                                               <label for='nombre'>Nombre</label>
+                                                               <input type='text' class='form-control' name='nom' aria-describedby='emailHelp' placeholder='Ingresa Nombre'>
                                                              </div>
-                                                             ";
+                                                             <div class='form-group'>
+                                                               <label for='Edad'>Edad</label>
+                                                               <input type='text' class='form-control' name='edad' placeholder='Ingresa Edad'>
+                                                             </div>
+                                                             <div class='form-group'>
+                                                               <label for='Telefono'>Telefono</label>
+                                                               <input type='text' class='form-control' name='tel' placeholder='Ingresa Telefono'>
+                                                             </div>
+                                                             <div class='form-group'>
+                                                             <label for='Correo'>Correo</label>
+                                                             <input type='text' class='form-control' name='correo' placeholder='Ingresa Correo'>
+                                                           </div>
                                                              
-                                                          
-
+                                                             <button type='submit' class='btn btn-warning'>Submit</button>
+                                                           </form>
+                                                             </div>
+                                                             
+                                                             ";
+                                                            */
                                                             }
                                                           }
                                                         }
+                                                                  
                                                         ?>
                                         
                               </table>
                           </form> 
-                </div>
+                          
+      </div>
+      <!--modificar datos-->
+        <div class='miform'>
+                  <form method='POST' action='../BD/pdcargo.php'>
+                  <h6 class="text-center">Modificar Datos</h6>
+
+                  <label>Selecciona id usuario:</label>
+                  <select name="id">
+                      <?php
+                     require '../BD/conexion.php';
+                     $j=mysqli_query($conexion,"select *from cargo");
+                     while($fr=mysqli_fetch_row($j)){
+                      echo "
+                      <option value='$fr[0]'>$fr[0]</option>
+                ";
+                     }
+                      ?>
+                      </select>
+                        <div class='form-group'>
+                          <input type='text' class='form-control' name='nom' aria-describedby='emailHelp' placeholder='Ingresa Cargo'>
+                          </div>
+                                                              
+                <button type='submit' class='btn btn-warning'>Submit</button>
+                  </form>
+          </div>
+
+      
       
       <!--                Toggle de opciiones de la Base de Datos                           --->
       

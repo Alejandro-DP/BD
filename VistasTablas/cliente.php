@@ -60,8 +60,7 @@
                                               "  ;
                                                 }
                                               ?>
-                                              <th>  Seleccion Eliminar     </th>
-                                              <th>  Seleccion Modificar </th>
+                                              <th>   Seleccion    </th>
                                         </tr>
                                     </thead>
                                           <tbody>
@@ -90,9 +89,6 @@
                                                   <td>
                                                   <input type='checkbox' name='eliminar[]' value='$i[Id_cliente]'/>  
                                                   </td>
-                                                  <td>
-                                                  <input type='checkbox' name='modificar[]' value='$i[Id_cliente]'/>
-                                                  </td>
                                                   </tr>
                                                   ";
                                                       }
@@ -101,7 +97,7 @@
                                           <tfoot>
                                                         <tr>
                                                         <th><input type="submit" name="Agregar" value="Agregar" onclick="window.open('../VistasTablas/Nc.php')" class="btn btn-primary"/></th>
-                                                        <th><input type="submit" name="modi" value="Modificar"  class="btn btn-warning"/></th>
+                                                        <!--<th><input type="submit" name="modi" value="Modificar"  class="btn btn-warning"/></th>-->
                                                         <th><input type="submit" name="borrar" value="Eliminar"  class="btn btn-danger"/></th>
                                                         </tr>
                                           </tfoot>
@@ -121,7 +117,7 @@
                                                               $quer=mysqli_query($conexion,$sem);
                                                               echo "<script>
                                                               alert('Elemento Eliminado Con Exito');
-                                                              location.href='../VistasTablas/TablaClientes.php';
+                                                              location.href='../VistasTablas/cliente.php';
                                                               </script>";  
                                                             }
                                                           }
@@ -139,7 +135,8 @@
                                                           else{
                                                             
                                                             foreach ($_POST["modificar"] as $i) {
-                                                              include '../BD/conexion.php';
+                                                             // include '../BD/pdcliente.php';
+                                                              /*include '../BD/conexion.php';
                                                               
                                                               echo "
                                                              <div class='miform'>
@@ -166,12 +163,7 @@
                                                              </div>
                                                              
                                                              ";
-                                                             $id=$i;
-                                                             $nnom=$_POST['nom'];
-                                                             $ned=$_POST['edad'];
-                                                             $ntel=$_POST['tel'];
-                                                             $ncorr=$_POST['correo'];
-                                                             
+                                                            */
                                                             }
                                                           }
                                                         }
@@ -182,14 +174,41 @@
                           </form> 
                           
       </div>
+      <!--modificar datos-->
+        <div class='miform'>
+                  <form method='POST' action='../BD/pdcliente.php'>
+                  <h6 class="text-center">Modificar Datos</h6>
 
-      <?php
-   $id=$i;
-   $nnom=$_POST['nom'];
-   $ned=$_POST['edad'];
-   $ntel=$_POST['tel'];
-   $ncorr=$_POST['correo'];
-      ?>
+                  <label>Selecciona id usuario:</label>
+                  <select name="id">
+                      <?php
+                     require '../BD/conexion.php';
+                     $j=mysqli_query($conexion,"select *from cliente");
+                     while($fr=mysqli_fetch_row($j)){
+                      echo "
+                      <option value='$fr[0]'>$fr[0]</option>
+                ";
+                     }
+                      ?>
+                      </select>
+                        <div class='form-group'>
+                          <input type='text' class='form-control' name='nom' aria-describedby='emailHelp' placeholder='Ingresa Nombre'>
+                          </div>
+                          <div class='form-group'>
+                          <input type='text' class='form-control' name='edad' placeholder='Ingresa Edad'>
+                          </div>
+                          <div class='form-group'>
+                 <input type='text' class='form-control' name='tel' placeholder='Ingresa Telefono'>
+                       </div>
+                        <div class='form-group'>
+                    <input type='text' class='form-control' name='correo' placeholder='Ingresa Correo'>
+                  </div>
+                                                              
+                <button type='submit' class='btn btn-warning'>Submit</button>
+                  </form>
+          </div>
+
+      
       
       <!--                Toggle de opciiones de la Base de Datos                           --->
       
