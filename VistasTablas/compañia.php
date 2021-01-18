@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head lang="es">
-	<link  rel="icon" href="../Recursos/favicon.ico">
+<link  rel="icon" href="../Recursos/logo.ico">
 	<title>
-		NuevaBD
+		Compañias
 	</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">

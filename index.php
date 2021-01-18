@@ -8,9 +8,13 @@ if (isset($_SESSION['login'])){
 
 <!DOCTYPE html>
 <html>
+
 <head lang="es">
 <!--	<link rel="icon" href="Recursos/logo.ico"> !-->
+<link  rel="icon" href="../Recursos/logo.ico">
+
 	<title>
+	
 		PhpMyPirata
 	</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">

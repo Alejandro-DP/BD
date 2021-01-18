@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head lang="es">
-	<link  rel="icon" href="../Recursos/favicon.ico">
+<link  rel="icon" href="../Recursos/logo.ico">
 	<title>
-		NuevaBD
+		ExportarBD
 	</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -74,7 +74,6 @@
 
       <div class="col-md-4 col-md-offset-1" id="opciones">
       <li><a href="FormularioRegistro.php">Crear Usuario</a></li>
-        <li><a href="Importar.php">Importar</a></li>
         <li ><a href="exportarbd.php">Exportar</a></li>
         <li><a href="UserView.php">Cuentas de Usuario</a></li>
       </div>

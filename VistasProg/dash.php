@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head lang="es">
-	<link  rel="icon" href="../Recursos/favicon.ico">
+<link  rel="icon" href="../Recursos/logo.ico">
 	<title>
-		NuevaBD
+		DashboardProgramador
 	</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5,minimum-scale=0.86">
