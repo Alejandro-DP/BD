@@ -19,7 +19,7 @@
   </div>
   <div class="user">
     <div class="img" onclick="togle2()">
-     <img src="../Recursos/perfildeusuario.jpg" class="user-logo">
+    <a class="logodb" href="../VistasAdmin/DashboardAdmin.php"><img src="../Recursos/thelogo.png"></a>
     </div>
    
     <p class="text-right" id="name">

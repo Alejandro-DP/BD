@@ -18,7 +18,7 @@
 <body id="page-top ">
   <div class=" navbar navbar-expand  bg-success topbar  static-top shadow">
     <div class="logodb">
-      <img src="../Recursos/thelogo.png">
+    <a class="logodb" href="../VistasAdmin/DashboardAdmin.php"><img src="../Recursos/thelogo.png"></a>
       
     </div>
 
