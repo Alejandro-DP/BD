@@ -140,14 +140,29 @@
                                                             
                                                             foreach ($_POST["modificar"] as $i) {
                                                               include '../BD/conexion.php';
+                                                              
                                                               echo "
                                                              <div class='miform'>
                                                              <form>
-
+                                                             <div class='form-group'>
+                                                               <label for='nombre'>Nombre</label>
+                                                               <input type='text' class='form-control' name='nom' aria-describedby='emailHelp' placeholder='Ingresa Nombre'>
+                                                             </div>
+                                                             <div class='form-group'>
+                                                               <label for='Edad'>Edad</label>
+                                                               <input type='text' class='form-control' name='edad' placeholder='Ingresa Edad'>
+                                                             </div>
+                                                             <div class='form-group'>
+                                                               <label for='Telefono'>Telefono</label>
+                                                               <input type='text' class='form-control' name='tel' placeholder='Ingresa Telefono'>
+                                                             </div>
+                                                             <div class='form-group'>
+                                                             <label for='Correo'>Correo</label>
+                                                             <input type='text' class='form-control' name='correo' placeholder='Ingresa Correo'>
+                                                           </div>
                                                              
-
-
-                                                             </form>
+                                                             <button type='submit' class='btn btn-warning'>Submit</button>
+                                                           </form>
                                                              </div>
                                                              ";
 
