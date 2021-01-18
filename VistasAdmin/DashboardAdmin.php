@@ -32,7 +32,7 @@
     ?>
       </p>
       <div class="img" onclick="togle2()">
-     <a href=""> <img src="../Recursos/perfildeusuario.jpg"  class="user-logo"></a> 
+      <img src="../Recursos/perfildeusuario.jpg"  class="user-logo">
       </div>
     </div>
     
