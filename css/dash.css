@@ -2,15 +2,18 @@
     width: 100px;
     height: 200px;
     background: #fff;
-    position: absolute;
-    margin-top: 6.2rem;
-    margin-left: 13rem;
+    margin-left: 190px;
+    margin-top: 80px;
+    display: none;
 }
-.t-opc:link,  .t-opc:active{
+ .t-opc {
     display: block;
     text-decoration: none;
     color: black;
     height: 23px;
     width: 50px;
+}
+.t-opc :hover{
+    background: #cecece;
 }
 

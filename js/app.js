@@ -18,8 +18,8 @@ function togle() {
     }
   }
   
-  function opc(){
-    var y=document.getElementById("Air");
+  function air(){
+    var y=document.getElementById("op");
     if(y.style.display==="none"){
       y.style.display="block";
 

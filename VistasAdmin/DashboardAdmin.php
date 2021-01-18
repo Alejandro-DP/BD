@@ -32,7 +32,7 @@
     ?>
       </p>
       <div class="img" onclick="togle2()">
-      <img src="../Recursos/perfildeusuario.jpg" class="user-logo">
+     <a href=""> <img src="../Recursos/perfildeusuario.jpg"  class="user-logo"></a> 
       </div>
     </div>
     
@@ -41,6 +41,8 @@
       <button class="btn btn-danger" id="boton" onclick="location='../BD/cs.php'"> Cerrar Sesion   </buton>
     </div>
     </div>
+    
+
     <!--              DataTables                           -->
     <div>
       <form method="POST" class="taba" >
@@ -92,7 +94,9 @@
           </table>
         </form>
       </div>
+        
 
+      
         <div class="content-bdn">
         <h6 class="text-center">Crear Base De Datos</h6>
         <form class="inn" action="../BD/creacionbd.php" method="post">
@@ -111,23 +115,9 @@
         </form>
         </div>
       </div>
-      <!--                Toggle de opciiones de la Base de Datos                           --->
-      <div class="opciones-toggle" onclick = "opc()">
-<<<<<<< HEAD
-    <div class="dd"> 
-      
-    </div>
-=======
-      <?php
-      require '../BD/conexion.php';
-      $consulta=mysqli_query($conexion,"SHOW TABLES IN Air");
-      while($op=mysqli_fetch_row($consulta)){
-      
-       echo '<a class="t-opc" href="../VistasTablas/' . htmlspecialchars($op[0]) . '.php" />'.($op[0])."\n";
-      }
-      ?>
->>>>>>> 09dd672f9d90b1a6fdfffc814ec0cc2c8ba1a960
-      </div>
+
+        
+
       <!-- Menu lateral-->
       <div class=" wrapper navbar-nav bg-white sidebar "> 
         <h5 class = "icon-dat">Bases De Datos</h5>
@@ -137,11 +127,43 @@
           $sentenciasql="SHOW DATABASES";
           $consulta=mysqli_query($conexion,$sentenciasql);
           while($otra=mysqli_fetch_row($consulta)){
-                echo '<li class="acord" id ="'.htmlspecialchars($otra[0]).'" />' .($otra[0])."\n";  
+                echo '<li class="acord" onclick="'.htmlspecialchars($otra[0]."()").'" id ="'.htmlspecialchars($otra[0]).'" />' .($otra[0])."\n";  
             }
         ?>
         </div>
+         <!--                Toggle de opciiones de la Base de Datos                           --->
+
+          <div class="opciones-toggle" id="op">
+            <?php
+            require '../BD/conexion.php';
+            $sentenciasql = "SHOW TABLES IN Air";
+            $consulta=mysqli_query($conexion,$sentenciasql);
+            while($op=mysqli_fetch_row($consulta)){
+            
+              echo '<a class="t-opc" href="' . htmlspecialchars("../VistasTablas/".
+              urlencode($op[0]).".php") . '" />'.($op[0])."\n";
+
+            }
+            ?>
+            </div>
+                <!-- boton flotante -->
+      <div class="button-flo " onclick="togle()">
+        <img class="opc"src="../Recursos/more.png" >
       </div>
+
+      <div class="col-md-4 col-md-offset-1" id="opciones">
+      <li><a href="FormularioRegistro.php">Crear Usuario</a></li>
+        <li><a href="Importar.php">Importar</a></li>
+        <li ><a href="exportarbd.php">Exportar</a></li>
+        <li><a href="UserView.php">Cuentas de Usuario</a></li>
+      </div>
+  </div>
+
+      </div>
+
+
+
+      
     <!-- boton flotante -->
       <div class="button-flo " onclick="togle()">
         <img class="opc"src="../Recursos/more.png" >

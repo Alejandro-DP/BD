@@ -22,17 +22,23 @@ $consulta=mysqli_query($conexion,$sentenciasql);
 
 </head>
 <body>
-<div >
-<?php
-      require './BD/conexion.php';
-      $sentenciasql = "SHOW TABLES IN Air";
-      $consulta=mysqli_query($conexion,$sentenciasql);
-      while($op=mysqli_fetch_row($consulta)){
-      
-        echo '<a class="t-opc" href="' . htmlspecialchars($op[0]) . '" />'.($op[0])."\n";
+           <!-- Menu lateral-->
+           <div class="menu"> 
+        <h5 class = "icon-dat">Bases De Datos</h5>
+        <div class="data-bases">
+        <?php
+          require './BD/conexion.php';
+          $sentenciasql="SHOW DATABASES";
+          $consulta=mysqli_query($conexion,$sentenciasql);
+          while($otra=mysqli_fetch_row($consulta)){
+            echo '<li class="acord" onclick="'.htmlspecialchars($op[0]).'" id ="'.htmlspecialchars($otra[0]).'" />' .($otra[0])."\n";  
+          }
+        ?>
+        </div>
+ 
+      </div>
 
-      }
-      ?>
+  
    <script src="./js/jquery.js"></script>
   <script src="./js/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
